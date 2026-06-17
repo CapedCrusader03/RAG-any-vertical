@@ -25,7 +25,24 @@ eval_client = OpenAI(
 EVALS_DIR = os.path.dirname(__file__)
 
 def llm_judge_score(prompt: str, retries: int = 3) -> float:
-    """Helper to query the local LLM for scoring (0 to 5 score) with exponential backoff."""
+    """Helper to query the LLM (Gemini or local) for scoring (0 to 5 score) with exponential backoff."""
+    if os.getenv("GEMINI_API_KEY"):
+        import google.generativeai as genai
+        for attempt in range(retries):
+            try:
+                model = genai.GenerativeModel(os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite"))
+                response = model.generate_content(prompt)
+                score_text = response.text.strip()
+                # Extract first numeric character found in response
+                numbers = [int(s) for s in score_text if s.isdigit()]
+                if numbers:
+                    return float(numbers[0]) / 5.0 # Normalize to 0.0 - 1.0 range
+                return 0.0
+            except Exception as e:
+                logger.warning(f"Gemini LLM Judge score attempt {attempt+1} failed: {e}")
+                time.sleep(2 ** attempt)
+        return 0.0
+
     for attempt in range(retries):
         try:
             response = eval_client.chat.completions.create(

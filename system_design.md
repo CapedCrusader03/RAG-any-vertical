@@ -153,9 +153,10 @@ def retrieve_chunks(
 ---
 
 ## 11. Failure Scenarios & Recovery
-- **LM Studio Crash**: The agent catches ConnectionError and falls back to a graceful refusal message indicating the synthesis service is temporarily offline.
+- **LM Studio / Gemini API Crash**: The agent catches client connection errors and falls back to a graceful refusal message indicating the synthesis service is temporarily offline.
+- **Dynamic Local/Cloud Routing**: If `GEMINI_API_KEY` is provided, the orchestrator dynamically routes synthesis and evaluation steps to the Google AI Studio free-tier Cloud API, offloading local GPU VRAM. If absent, it defaults to the local LM Studio instance.
 - **Database Connection Loss**: Retries connection up to 3 times with exponential backoff before throwing a structured database error.
-- **Incomplete Chunk Citations**: If Gemma fabricates a citation or fails to cite, the post-filter reruns synthesis with a strict formatting warning or defaults to raw search results.
+- **Incomplete Chunk Citations**: If the model fabricates a citation or fails to cite, the post-filter returns a refusal warning to prevent hallucination propagation.
 
 ---
 

@@ -1,3 +1,4 @@
+import os
 import re
 import logging
 from openai import OpenAI
@@ -34,6 +35,20 @@ User Query: "{query}"
 
 Respond with EXACTLY one word: "SAFE" or "UNSAFE".
 Response:"""
+
+    if os.getenv("GEMINI_API_KEY"):
+        try:
+            import google.generativeai as genai
+            model = genai.GenerativeModel(model_name)
+            response = model.generate_content(safety_prompt)
+            verdict = response.text.strip().upper()
+            if "UNSAFE" in verdict:
+                logger.warning(f"Gemini security moderation flagged query: '{query}'")
+                return False, "Input rejected: Safe use policies violated."
+            return True, ""
+        except Exception as e:
+            logger.error(f"Error during Gemini input safety verification: {e}")
+            return True, ""
 
     try:
         response = client.chat.completions.create(

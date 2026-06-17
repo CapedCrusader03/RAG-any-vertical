@@ -38,14 +38,22 @@ if os.getenv("PHOENIX_COLLECTOR_ENDPOINT"):
     except Exception as e:
         logger.warning(f"Could not initialize Arize Phoenix tracing: {e}")
 
-# Setup OpenAI client pointing to LM Studio local server
-LM_STUDIO_API_BASE = os.getenv("LM_STUDIO_API_BASE", "http://localhost:1234/v1")
-LM_STUDIO_MODEL = os.getenv("LM_STUDIO_MODEL", "gemma-e4b")
+# Setup clients: dynamic check for Gemini API or local LM Studio
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite")
 
-client = OpenAI(
-    base_url=LM_STUDIO_API_BASE,
-    api_key="lm-studio"  # LM Studio does not require a valid key, but cannot be empty
-)
+if GEMINI_API_KEY:
+    import google.generativeai as genai
+    genai.configure(api_key=GEMINI_API_KEY)
+    logger.info(f"Gemini API tracing/client configured using model: {GEMINI_MODEL}")
+    client = None
+else:
+    LM_STUDIO_API_BASE = os.getenv("LM_STUDIO_API_BASE", "http://localhost:1234/v1")
+    LM_STUDIO_MODEL = os.getenv("LM_STUDIO_MODEL", "gemma-e4b")
+    client = OpenAI(
+        base_url=LM_STUDIO_API_BASE,
+        api_key="lm-studio"
+    )
 
 
 # 2. Define LangGraph Agent State
@@ -65,7 +73,8 @@ class AgentState(TypedDict):
 def input_guardrail_node(state: AgentState) -> dict:
     """Verifies that the user prompt is safe before running retrieval."""
     logger.info("Starting input guardrail safety verification...")
-    is_safe, message = input_safety_check(state["query"], client, LM_STUDIO_MODEL)
+    model_name = GEMINI_MODEL if GEMINI_API_KEY else LM_STUDIO_MODEL
+    is_safe, message = input_safety_check(state["query"], client, model_name)
     return {
         "is_safe": is_safe,
         "safety_message": message
@@ -93,10 +102,10 @@ def rerank_node(state: AgentState) -> dict:
     return {"reranked_chunks": reranked}
 
 def synthesize_node(state: AgentState) -> dict:
-    """Generates the final response using local Gemma in LM Studio."""
-    logger.info("Synthesizing answer using locally hosted Gemma model...")
+    """Generates the final response using either Google Gemini API or local LM Studio."""
+    logger.info("Synthesizing answer...")
     
-    # Format context with stable, deterministic headings to maximize local prompt cache performance
+    # Format context with stable, deterministic headings to maximize prompt cache performance
     context_str = ""
     for idx, chunk in enumerate(state["reranked_chunks"]):
         doc_title = chunk.get("doc_title", "Unknown Policy")
@@ -119,21 +128,41 @@ Strict Compliance Rules:
 </query>
 Response:"""
 
-    try:
-        response = client.chat.completions.create(
-            model=LM_STUDIO_MODEL,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=0.2, # Keep temperature low for facts
-            max_tokens=512
-        )
-        answer = response.choices[0].message.content
-        return {"answer": answer}
-    except Exception as e:
-        logger.error(f"Synthesis failed: {e}")
-        return {"answer": f"Error: Synthesis failure. Details: {e}"}
+    if GEMINI_API_KEY:
+        try:
+            import google.generativeai as genai
+            model = genai.GenerativeModel(
+                model_name=GEMINI_MODEL,
+                system_instruction=system_prompt
+            )
+            response = model.generate_content(
+                user_prompt,
+                generation_config=genai.types.GenerationConfig(
+                    temperature=0.2,
+                    max_output_tokens=512
+                )
+            )
+            answer = response.text
+            return {"answer": answer}
+        except Exception as e:
+            logger.error(f"Gemini Synthesis failed: {e}")
+            return {"answer": f"Error: Gemini Synthesis failure. Details: {e}"}
+    else:
+        try:
+            response = client.chat.completions.create(
+                model=LM_STUDIO_MODEL,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0.2, # Keep temperature low for facts
+                max_tokens=512
+            )
+            answer = response.choices[0].message.content
+            return {"answer": answer}
+        except Exception as e:
+            logger.error(f"Synthesis failed: {e}")
+            return {"answer": f"Error: Synthesis failure. Details: {e}"}
 
 def output_guardrail_node(state: AgentState) -> dict:
     """Validates citations in generated answer and scrubs PII."""
