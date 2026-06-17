@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "GS-TX-1",
+    "query": "What is the limit for water damage in Texas",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-2",
+    "query": "What is the limit for water damage in Texas Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-3",
+    "query": "What is the limit for water damage in Texas Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-4",
+    "query": "What is the limit for water damage in Texas for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-5",
+    "query": "What is the limit for water damage in Texas under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-6",
+    "query": "What is the limit for water damage in Texas",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-7",
+    "query": "What is the limit for water damage in Texas Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-8",
+    "query": "What is the limit for water damage in Texas Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-9",
+    "query": "What is the limit for water damage in Texas for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-10",
+    "query": "What is the limit for water damage in Texas under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-11",
+    "query": "What is the limit for water damage in Texas",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-12",
+    "query": "What is the limit for water damage in Texas Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-13",
+    "query": "What is the limit for water damage in Texas Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-14",
+    "query": "What is the limit for water damage in Texas for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-15",
+    "query": "What is the limit for water damage in Texas under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-16",
+    "query": "How much does the water damage endorsement cover in TX",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-17",
+    "query": "How much does the water damage endorsement cover in TX Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-18",
+    "query": "How much does the water damage endorsement cover in TX Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-19",
+    "query": "How much does the water damage endorsement cover in TX for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-20",
+    "query": "How much does the water damage endorsement cover in TX under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-21",
+    "query": "How much does the water damage endorsement cover in TX",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-22",
+    "query": "How much does the water damage endorsement cover in TX Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-23",
+    "query": "How much does the water damage endorsement cover in TX Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-24",
+    "query": "How much does the water damage endorsement cover in TX for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-25",
+    "query": "How much does the water damage endorsement cover in TX under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-26",
+    "query": "How much does the water damage endorsement cover in TX",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-27",
+    "query": "How much does the water damage endorsement cover in TX Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-28",
+    "query": "How much does the water damage endorsement cover in TX Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-29",
+    "query": "How much does the water damage endorsement cover in TX for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-30",
+    "query": "How much does the water damage endorsement cover in TX under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-31",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-32",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-33",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-34",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-35",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-36",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-37",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-38",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-39",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-40",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-41",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-42",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-43",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-44",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-45",
+    "query": "What is the liability cap for plumbing leaks in Texas homeowners policy under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-46",
+    "query": "Is there a limit of liability on water discharge claims in Texas",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-47",
+    "query": "Is there a limit of liability on water discharge claims in Texas Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-48",
+    "query": "Is there a limit of liability on water discharge claims in Texas Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-49",
+    "query": "Is there a limit of liability on water discharge claims in Texas for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-50",
+    "query": "Is there a limit of liability on water discharge claims in Texas under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-51",
+    "query": "Is there a limit of liability on water discharge claims in Texas",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-52",
+    "query": "Is there a limit of liability on water discharge claims in Texas Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-53",
+    "query": "Is there a limit of liability on water discharge claims in Texas Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-54",
+    "query": "Is there a limit of liability on water discharge claims in Texas for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-55",
+    "query": "Is there a limit of liability on water discharge claims in Texas under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-56",
+    "query": "Is there a limit of liability on water discharge claims in Texas",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-57",
+    "query": "Is there a limit of liability on water discharge claims in Texas Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-58",
+    "query": "Is there a limit of liability on water discharge claims in Texas Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-59",
+    "query": "Is there a limit of liability on water discharge claims in Texas for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-60",
+    "query": "Is there a limit of liability on water discharge claims in Texas under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-61",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-62",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-63",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-64",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-65",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-66",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-67",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-68",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-69",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-70",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-71",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-72",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-73",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-74",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-75",
+    "query": "What does the water damage endorsement cover for plumbing overflow in TX under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-76",
+    "query": "How much will I get paid for water damage under the Texas policy",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-77",
+    "query": "How much will I get paid for water damage under the Texas policy Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-78",
+    "query": "How much will I get paid for water damage under the Texas policy Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-79",
+    "query": "How much will I get paid for water damage under the Texas policy for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-80",
+    "query": "How much will I get paid for water damage under the Texas policy under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-81",
+    "query": "How much will I get paid for water damage under the Texas policy",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-82",
+    "query": "How much will I get paid for water damage under the Texas policy Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-83",
+    "query": "How much will I get paid for water damage under the Texas policy Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-84",
+    "query": "How much will I get paid for water damage under the Texas policy for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-85",
+    "query": "How much will I get paid for water damage under the Texas policy under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-86",
+    "query": "How much will I get paid for water damage under the Texas policy",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-87",
+    "query": "How much will I get paid for water damage under the Texas policy Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-88",
+    "query": "How much will I get paid for water damage under the Texas policy Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-89",
+    "query": "How much will I get paid for water damage under the Texas policy for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-90",
+    "query": "How much will I get paid for water damage under the Texas policy under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-91",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-92",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-93",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-94",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-95",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-96",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-97",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-98",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-99",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-100",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-101",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-102",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-103",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-104",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-105",
+    "query": "What is the Texas homeowners policy limit for plumbing water damage under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-106",
+    "query": "Tell me the Texas limit for sudden water overflow claims.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-107",
+    "query": "Tell me the Texas limit for sudden water overflow claims. Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-108",
+    "query": "Tell me the Texas limit for sudden water overflow claims. Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-109",
+    "query": "Tell me the Texas limit for sudden water overflow claims. for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-110",
+    "query": "Tell me the Texas limit for sudden water overflow claims. under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-111",
+    "query": "Tell me the Texas limit for sudden water overflow claims.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-112",
+    "query": "Tell me the Texas limit for sudden water overflow claims. Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-113",
+    "query": "Tell me the Texas limit for sudden water overflow claims. Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-114",
+    "query": "Tell me the Texas limit for sudden water overflow claims. for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-115",
+    "query": "Tell me the Texas limit for sudden water overflow claims. under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-116",
+    "query": "Tell me the Texas limit for sudden water overflow claims.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-117",
+    "query": "Tell me the Texas limit for sudden water overflow claims. Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-118",
+    "query": "Tell me the Texas limit for sudden water overflow claims. Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-119",
+    "query": "Tell me the Texas limit for sudden water overflow claims. for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-120",
+    "query": "Tell me the Texas limit for sudden water overflow claims. under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-121",
+    "query": "What is the cap on accidental water discharge in Texas",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-122",
+    "query": "What is the cap on accidental water discharge in Texas Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-123",
+    "query": "What is the cap on accidental water discharge in Texas Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-124",
+    "query": "What is the cap on accidental water discharge in Texas for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-125",
+    "query": "What is the cap on accidental water discharge in Texas under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-126",
+    "query": "What is the cap on accidental water discharge in Texas",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-127",
+    "query": "What is the cap on accidental water discharge in Texas Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-128",
+    "query": "What is the cap on accidental water discharge in Texas Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-129",
+    "query": "What is the cap on accidental water discharge in Texas for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-130",
+    "query": "What is the cap on accidental water discharge in Texas under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-131",
+    "query": "What is the cap on accidental water discharge in Texas",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-132",
+    "query": "What is the cap on accidental water discharge in Texas Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-133",
+    "query": "What is the cap on accidental water discharge in Texas Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-134",
+    "query": "What is the cap on accidental water discharge in Texas for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-135",
+    "query": "What is the cap on accidental water discharge in Texas under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-136",
+    "query": "How much liability coverage do I have for water damage in TX",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-137",
+    "query": "How much liability coverage do I have for water damage in TX Please clarify.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-138",
+    "query": "How much liability coverage do I have for water damage in TX Can you check the policy rules?",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-139",
+    "query": "How much liability coverage do I have for water damage in TX for my house.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-140",
+    "query": "How much liability coverage do I have for water damage in TX under the 2026 endorsement.",
+    "roles": [
+      "guest"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-141",
+    "query": "How much liability coverage do I have for water damage in TX",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-142",
+    "query": "How much liability coverage do I have for water damage in TX Please clarify.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-143",
+    "query": "How much liability coverage do I have for water damage in TX Can you check the policy rules?",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-144",
+    "query": "How much liability coverage do I have for water damage in TX for my house.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-145",
+    "query": "How much liability coverage do I have for water damage in TX under the 2026 endorsement.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-146",
+    "query": "How much liability coverage do I have for water damage in TX",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-147",
+    "query": "How much liability coverage do I have for water damage in TX Please clarify.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-148",
+    "query": "How much liability coverage do I have for water damage in TX Can you check the policy rules?",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-149",
+    "query": "How much liability coverage do I have for water damage in TX for my house.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-TX-150",
+    "query": "How much liability coverage do I have for water damage in TX under the 2026 endorsement.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-TX"
+    ],
+    "expected_citations": [
+      "TX-WD-2026-V1, Section I, page 3"
+    ],
+    "ground_truth": "The limit of liability for water damage claims under the Texas endorsement is restricted to $10,000 per occurrence. This limit applies to all damage to dwelling, personal property, and loss of use."
+  },
+  {
+    "id": "GS-CA-151",
+    "query": "What is the wildfire mitigation limit in California",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-152",
+    "query": "What is the wildfire mitigation limit in California immediately.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-153",
+    "query": "What is the wildfire mitigation limit in California as soon as possible.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-154",
+    "query": "What is the wildfire mitigation limit in California based on CA-WF-2026-V2.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-155",
+    "query": "What is the wildfire mitigation limit in California under state guidelines.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-156",
+    "query": "What is the wildfire mitigation limit in California",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-157",
+    "query": "What is the wildfire mitigation limit in California immediately.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-158",
+    "query": "What is the wildfire mitigation limit in California as soon as possible.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-159",
+    "query": "What is the wildfire mitigation limit in California based on CA-WF-2026-V2.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-160",
+    "query": "What is the wildfire mitigation limit in California under state guidelines.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-161",
+    "query": "Does the California wildfire endorsement cover private defense services",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-162",
+    "query": "Does the California wildfire endorsement cover private defense services immediately.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-163",
+    "query": "Does the California wildfire endorsement cover private defense services as soon as possible.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-164",
+    "query": "Does the California wildfire endorsement cover private defense services based on CA-WF-2026-V2.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-165",
+    "query": "Does the California wildfire endorsement cover private defense services under state guidelines.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-166",
+    "query": "Does the California wildfire endorsement cover private defense services",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-167",
+    "query": "Does the California wildfire endorsement cover private defense services immediately.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-168",
+    "query": "Does the California wildfire endorsement cover private defense services as soon as possible.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-169",
+    "query": "Does the California wildfire endorsement cover private defense services based on CA-WF-2026-V2.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-170",
+    "query": "Does the California wildfire endorsement cover private defense services under state guidelines.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-171",
+    "query": "How much does CA policy cover for wildfire mitigation",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-172",
+    "query": "How much does CA policy cover for wildfire mitigation immediately.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-173",
+    "query": "How much does CA policy cover for wildfire mitigation as soon as possible.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-174",
+    "query": "How much does CA policy cover for wildfire mitigation based on CA-WF-2026-V2.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-175",
+    "query": "How much does CA policy cover for wildfire mitigation under state guidelines.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-176",
+    "query": "How much does CA policy cover for wildfire mitigation",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-177",
+    "query": "How much does CA policy cover for wildfire mitigation immediately.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-178",
+    "query": "How much does CA policy cover for wildfire mitigation as soon as possible.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-179",
+    "query": "How much does CA policy cover for wildfire mitigation based on CA-WF-2026-V2.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-180",
+    "query": "How much does CA policy cover for wildfire mitigation under state guidelines.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-181",
+    "query": "What is the penalty for brush clearance violation in California",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-182",
+    "query": "What is the penalty for brush clearance violation in California immediately.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-183",
+    "query": "What is the penalty for brush clearance violation in California as soon as possible.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-184",
+    "query": "What is the penalty for brush clearance violation in California based on CA-WF-2026-V2.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-185",
+    "query": "What is the penalty for brush clearance violation in California under state guidelines.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-186",
+    "query": "What is the penalty for brush clearance violation in California",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-187",
+    "query": "What is the penalty for brush clearance violation in California immediately.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-188",
+    "query": "What is the penalty for brush clearance violation in California as soon as possible.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-189",
+    "query": "What is the penalty for brush clearance violation in California based on CA-WF-2026-V2.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-190",
+    "query": "What is the penalty for brush clearance violation in California under state guidelines.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-191",
+    "query": "What happens if I fail to maintain defensible space in California",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-192",
+    "query": "What happens if I fail to maintain defensible space in California immediately.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-193",
+    "query": "What happens if I fail to maintain defensible space in California as soon as possible.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-194",
+    "query": "What happens if I fail to maintain defensible space in California based on CA-WF-2026-V2.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-195",
+    "query": "What happens if I fail to maintain defensible space in California under state guidelines.",
+    "roles": [
+      "agent"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-196",
+    "query": "What happens if I fail to maintain defensible space in California",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-197",
+    "query": "What happens if I fail to maintain defensible space in California immediately.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-198",
+    "query": "What happens if I fail to maintain defensible space in California as soon as possible.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-199",
+    "query": "What happens if I fail to maintain defensible space in California based on CA-WF-2026-V2.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  },
+  {
+    "id": "GS-CA-200",
+    "query": "What happens if I fail to maintain defensible space in California under state guidelines.",
+    "roles": [
+      "underwriter"
+    ],
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "expected_citations": [
+      "CA-WF-2026-V2, Section I, page 5"
+    ],
+    "ground_truth": "The limit of liability for wildfire mitigation and structural damage under the California endorsement is $250,000 per occurrence. Coverage is reduced by 50% if the policyholder fails to maintain a 100-foot defensible space zone around the structure."
+  }
+]
