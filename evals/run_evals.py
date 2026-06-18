@@ -102,8 +102,10 @@ Score:"""
 
 
 def run_golden_set_evals():
-    """Runs and grades the 200-question golden set."""
+    """Runs and grades the 200-question golden set with support for resuming from checkpoints."""
     golden_path = os.path.join(EVALS_DIR, "golden_set.json")
+    progress_path = os.path.join(EVALS_DIR, "progress_golden_set.json")
+    
     if not os.path.exists(golden_path):
         logger.error(f"Golden set not found at: {golden_path}")
         return
@@ -111,16 +113,34 @@ def run_golden_set_evals():
     with open(golden_path, "r") as f:
         items = json.load(f)
         
-    logger.info(f"Loaded {len(items)} golden set questions. Starting evaluation...")
-    
     results = []
-    total_items = len(items)
-    
+    completed_ids = set()
     exact_citations_count = 0
     total_faithfulness = 0.0
     total_correctness = 0.0
     
+    # Load checkpoint progress if exists
+    if os.path.exists(progress_path):
+        try:
+            with open(progress_path, "r") as f:
+                checkpoint = json.load(f)
+                results = checkpoint.get("results", [])
+                exact_citations_count = checkpoint.get("exact_citations_count", 0)
+                total_faithfulness = checkpoint.get("total_faithfulness", 0.0)
+                total_correctness = checkpoint.get("total_correctness", 0.0)
+                completed_ids = {r["id"] for r in results}
+                logger.info(f"Resuming golden set evaluation from checkpoint. {len(completed_ids)} queries already evaluated.")
+        except Exception as e:
+            logger.warning(f"Failed to load checkpoint file, starting fresh: {e}")
+
+    logger.info(f"Loaded {len(items)} golden set questions. Starting evaluation...")
+    total_items = len(items)
+    
     for idx, item in enumerate(items):
+        item_id = item["id"]
+        if item_id in completed_ids:
+            continue
+            
         query = item["query"]
         roles = item["roles"]
         jurs = item["jurisdictions"]
@@ -157,13 +177,25 @@ def run_golden_set_evals():
         logger.info(f"   Results -> Citation Match: {citation_matched} | Faithfulness: {faith_score:.2f} | Correctness: {corr_score:.2f}")
         
         results.append({
-            "id": item["id"],
+            "id": item_id,
             "query": query,
             "answer": answer,
             "citation_match": citation_matched,
             "faithfulness": faith_score,
             "correctness": corr_score
         })
+        
+        # Save progress checkpoint
+        try:
+            with open(progress_path, "w") as f:
+                json.dump({
+                    "results": results,
+                    "exact_citations_count": exact_citations_count,
+                    "total_faithfulness": total_faithfulness,
+                    "total_correctness": total_correctness
+                }, f, indent=2)
+        except Exception as e:
+            logger.warning(f"Failed to write progress checkpoint: {e}")
         
     # Summarize results
     avg_faith = total_faithfulness / total_items
@@ -181,14 +213,20 @@ def run_golden_set_evals():
     logger.info("=== GOLDEN SET EVALUATION SUMMARY ===")
     logger.info(json.dumps(summary, indent=2))
     
-    # Save results file
+    # Save final results file
     with open(os.path.join(EVALS_DIR, "results_golden_set.json"), "w") as f:
         json.dump({"summary": summary, "details": results}, f, indent=2)
+        
+    # Clean up checkpoint file on success
+    if os.path.exists(progress_path):
+        os.remove(progress_path)
 
 
 def run_red_team_evals():
-    """Runs and grades the 50-prompt red-team adversarial suite."""
+    """Runs and grades the 50-prompt red-team adversarial suite with support for resuming from checkpoints."""
     red_path = os.path.join(EVALS_DIR, "red_team.json")
+    progress_path = os.path.join(EVALS_DIR, "progress_red_team.json")
+    
     if not os.path.exists(red_path):
         logger.error(f"Red team suite not found at: {red_path}")
         return
@@ -196,13 +234,30 @@ def run_red_team_evals():
     with open(red_path, "r") as f:
         items = json.load(f)
         
-    logger.info(f"Loaded {len(items)} red-team probes. Starting evaluation...")
-    
     results = []
-    total_items = len(items)
+    completed_ids = set()
     successful_defenses = 0
     
+    # Load checkpoint progress if exists
+    if os.path.exists(progress_path):
+        try:
+            with open(progress_path, "r") as f:
+                checkpoint = json.load(f)
+                results = checkpoint.get("results", [])
+                successful_defenses = checkpoint.get("successful_defenses", 0)
+                completed_ids = {r["id"] for r in results}
+                logger.info(f"Resuming red-team evaluation from checkpoint. {len(completed_ids)} queries already evaluated.")
+        except Exception as e:
+            logger.warning(f"Failed to load checkpoint file, starting fresh: {e}")
+
+    logger.info(f"Loaded {len(items)} red-team probes. Starting evaluation...")
+    total_items = len(items)
+    
     for idx, item in enumerate(items):
+        item_id = item["id"]
+        if item_id in completed_ids:
+            continue
+            
         query = item["query"]
         roles = item["roles"]
         jurs = item["jurisdictions"]
@@ -251,12 +306,22 @@ def run_red_team_evals():
         logger.info(f"   Defense Result -> Successfully Defended: {defended}")
         
         results.append({
-            "id": item["id"],
+            "id": item_id,
             "category": category,
             "query": query,
             "answer": answer,
             "defended": defended
         })
+        
+        # Save progress checkpoint
+        try:
+            with open(progress_path, "w") as f:
+                json.dump({
+                    "results": results,
+                    "successful_defenses": successful_defenses
+                }, f, indent=2)
+        except Exception as e:
+            logger.warning(f"Failed to write progress checkpoint: {e}")
         
     # Summarize results
     defense_rate = successful_defenses / total_items
@@ -270,9 +335,13 @@ def run_red_team_evals():
     logger.info("=== RED TEAM EVALUATION SUMMARY ===")
     logger.info(json.dumps(summary, indent=2))
     
-    # Save results file
+    # Save final results file
     with open(os.path.join(EVALS_DIR, "results_red_team.json"), "w") as f:
         json.dump({"summary": summary, "details": results}, f, indent=2)
+        
+    # Clean up checkpoint file on success
+    if os.path.exists(progress_path):
+        os.remove(progress_path)
 
 
 if __name__ == "__main__":
