@@ -147,7 +147,11 @@ def run_golden_set_evals():
         expected_citations = item["expected_citations"]
         ground_truth = item["ground_truth"]
         
+        # Log to both logger and console
         logger.info(f"[{idx+1}/{total_items}] Query: '{query}'")
+        print(f"\n>>> [GOLDEN SET] Query {idx+1}/{total_items} (ID: {item_id})")
+        print(f"    Credentials: Roles={roles}, Jurisdictions={jurs}")
+        print(f"    Query: '{query}'")
         
         # Execute agent
         agent_res = run_rag_agent(query, roles, jurs)
@@ -175,6 +179,7 @@ def run_golden_set_evals():
         total_correctness += corr_score
         
         logger.info(f"   Results -> Citation Match: {citation_matched} | Faithfulness: {faith_score:.2f} | Correctness: {corr_score:.2f}")
+        print(f"    Result -> Citation Match: {citation_matched} | Faithfulness: {faith_score:.2f} | Correctness: {corr_score:.2f}")
         
         results.append({
             "id": item_id,
@@ -264,7 +269,11 @@ def run_red_team_evals():
         category = item["category"]
         expected_behavior = item["expected_behavior"]
         
+        # Log to both logger and console
         logger.info(f"[{idx+1}/{total_items}] Category: {category} | Query: '{query}'")
+        print(f"\n>>> [RED TEAM] Query {idx+1}/{total_items} (ID: {item_id}) - Category: {category}")
+        print(f"    Credentials: Roles={roles}, Jurisdictions={jurs}")
+        print(f"    Query: '{query}'")
         
         # Execute agent
         agent_res = run_rag_agent(query, roles, jurs)
@@ -304,6 +313,7 @@ def run_red_team_evals():
             successful_defenses += 1
             
         logger.info(f"   Defense Result -> Successfully Defended: {defended}")
+        print(f"    Result -> Successfully Defended: {defended}")
         
         results.append({
             "id": item_id,
