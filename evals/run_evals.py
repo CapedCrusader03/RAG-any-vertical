@@ -2,6 +2,7 @@ import os
 import json
 import logging
 import time
+import re
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -13,50 +14,67 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Setup local LLM Client for evaluation scoring
-LM_STUDIO_API_BASE = os.getenv("LM_STUDIO_API_BASE", "http://localhost:1234/v1")
-LM_STUDIO_MODEL = os.getenv("LM_STUDIO_MODEL", "gemma-e4b")
+# Setup LLM Client for evaluation scoring
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemma-4-31b-it")
 
-eval_client = OpenAI(
-    base_url=LM_STUDIO_API_BASE,
-    api_key="lm-studio"
-)
+if GEMINI_API_KEY:
+    eval_client = OpenAI(
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+        api_key=GEMINI_API_KEY
+    )
+    EVAL_MODEL = GEMINI_MODEL
+    logger.info(f"Scoring client configured using Google AI Studio with model: {EVAL_MODEL}")
+else:
+    LM_STUDIO_API_BASE = os.getenv("LM_STUDIO_API_BASE", "http://localhost:1234/v1")
+    LM_STUDIO_MODEL = os.getenv("LM_STUDIO_MODEL", "gemma-e4b")
+    eval_client = OpenAI(
+        base_url=LM_STUDIO_API_BASE,
+        api_key="lm-studio"
+    )
+    EVAL_MODEL = LM_STUDIO_MODEL
+    logger.info(f"Scoring client configured using local LM Studio with model: {EVAL_MODEL}")
 
 EVALS_DIR = os.path.dirname(__file__)
 
+def parse_llm_judge_score(score_text: str) -> float:
+    """Helper to parse a 0 to 5 score from the LLM output robustly, even with chain-of-thought/reasoning."""
+    text_clean = score_text.strip()
+    # 1. Try to match 'Score: <number>' or 'Rating: <number>'
+    match = re.search(r'(?:score|rating):\s*(\d(?:\.\d)?)', text_clean, re.IGNORECASE)
+    if match:
+        try:
+            return float(match.group(1)) / 5.0
+        except ValueError:
+            pass
+            
+    # 2. Find all standalone numbers in the text and take the last one
+    numbers = re.findall(r'\b\d(?:\.\d)?\b', text_clean)
+    if numbers:
+        try:
+            return float(numbers[-1]) / 5.0
+        except ValueError:
+            pass
+            
+    # 3. Fallback to extracting any single digit from the end of the text
+    for char in reversed(text_clean):
+        if char.isdigit():
+            return float(char) / 5.0
+            
+    return 0.0
+
 def llm_judge_score(prompt: str, retries: int = 3) -> float:
     """Helper to query the LLM (Gemini or local) for scoring (0 to 5 score) with exponential backoff."""
-    if os.getenv("GEMINI_API_KEY"):
-        import google.generativeai as genai
-        for attempt in range(retries):
-            try:
-                model = genai.GenerativeModel(os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite"))
-                response = model.generate_content(prompt)
-                score_text = response.text.strip()
-                # Extract first numeric character found in response
-                numbers = [int(s) for s in score_text if s.isdigit()]
-                if numbers:
-                    return float(numbers[0]) / 5.0 # Normalize to 0.0 - 1.0 range
-                return 0.0
-            except Exception as e:
-                logger.warning(f"Gemini LLM Judge score attempt {attempt+1} failed: {e}")
-                time.sleep(2 ** attempt)
-        return 0.0
-
     for attempt in range(retries):
         try:
             response = eval_client.chat.completions.create(
-                model=LM_STUDIO_MODEL,
+                model=EVAL_MODEL,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.0,
-                max_tokens=5
+                max_tokens=512 # Set larger tokens so reasoning models don't get cut off
             )
             score_text = response.choices[0].message.content.strip()
-            # Extract first numeric character found in response
-            numbers = [int(s) for s in score_text if s.isdigit()]
-            if numbers:
-                return float(numbers[0]) / 5.0 # Normalize to 0.0 - 1.0 range
-            return 0.0
+            return parse_llm_judge_score(score_text)
         except Exception as e:
             logger.warning(f"LLM Judge score attempt {attempt+1} failed: {e}")
             time.sleep(2 ** attempt)

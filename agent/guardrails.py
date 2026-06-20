@@ -36,20 +36,6 @@ User Query: "{query}"
 Respond with EXACTLY one word: "SAFE" or "UNSAFE".
 Response:"""
 
-    if os.getenv("GEMINI_API_KEY"):
-        try:
-            import google.generativeai as genai
-            model = genai.GenerativeModel(model_name)
-            response = model.generate_content(safety_prompt)
-            verdict = response.text.strip().upper()
-            if "UNSAFE" in verdict:
-                logger.warning(f"Gemini security moderation flagged query: '{query}'")
-                return False, "Input rejected: Safe use policies violated."
-            return True, ""
-        except Exception as e:
-            logger.error(f"Error during Gemini input safety verification: {e}")
-            return True, ""
-
     try:
         response = client.chat.completions.create(
             model=model_name,
@@ -59,7 +45,7 @@ Response:"""
         )
         verdict = response.choices[0].message.content.strip().upper()
         if "UNSAFE" in verdict:
-            logger.warning(f"Gemma security moderation flagged query: '{query}'")
+            logger.warning(f"Security moderation flagged query: '{query}'")
             return False, "Input rejected: Safe use policies violated."
         return True, ""
     except Exception as e:
@@ -87,11 +73,15 @@ def validate_citations(answer: str, retrieved_chunks: list[dict]) -> tuple[bool,
     to source anchors present in the retrieved chunks.
     Returns: (is_valid, filtered_answer, list_of_broken_citations)
     """
-    citations = CITATION_REGEX.findall(answer)
+    # Strip reasoning/thought block if present (e.g. <thought>...</thought> or <thinking>...</thinking>)
+    clean_answer = re.sub(r'<(thought|thinking)>.*?</\1>', '', answer, flags=re.DOTALL)
+    clean_answer = clean_answer.strip()
+
+    citations = CITATION_REGEX.findall(clean_answer)
     if not citations:
         # Check if model attempted to answer but skipped citation
         # Answers without citation in a regulated domain is a hard reject
-        return False, answer, ["No citations provided in the answer."]
+        return False, clean_answer, ["No citations provided in the answer."]
 
     # Extract source anchors from context chunks
     # Valid formats in chunk content: "Source Anchor: [Name, Section, page X]" or "[Name, Section, page X]"
@@ -133,9 +123,9 @@ def validate_citations(answer: str, retrieved_chunks: list[dict]) -> tuple[bool,
     if broken_citations:
         logger.warning(f"Hallucinated citations detected: {broken_citations}")
         # Append error marker or return invalid flag
-        return False, answer, broken_citations
+        return False, clean_answer, broken_citations
 
-    return True, answer, []
+    return True, clean_answer, []
 
 if __name__ == "__main__":
     # Test Presidio PII scrubber

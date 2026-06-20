@@ -40,13 +40,15 @@ if os.getenv("PHOENIX_COLLECTOR_ENDPOINT"):
 
 # Setup clients: dynamic check for Gemini API or local LM Studio
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemma-4-31b-it")
 
 if GEMINI_API_KEY:
-    import google.generativeai as genai
-    genai.configure(api_key=GEMINI_API_KEY)
-    logger.info(f"Gemini API tracing/client configured using model: {GEMINI_MODEL}")
-    client = None
+    client = OpenAI(
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+        api_key=GEMINI_API_KEY
+    )
+    model_name = GEMINI_MODEL
+    logger.info(f"Using Google AI Studio via OpenAI compatibility layer with model: {model_name}")
 else:
     LM_STUDIO_API_BASE = os.getenv("LM_STUDIO_API_BASE", "http://localhost:1234/v1")
     LM_STUDIO_MODEL = os.getenv("LM_STUDIO_MODEL", "gemma-e4b")
@@ -54,6 +56,8 @@ else:
         base_url=LM_STUDIO_API_BASE,
         api_key="lm-studio"
     )
+    model_name = LM_STUDIO_MODEL
+    logger.info(f"Using local LM Studio with model: {model_name}")
 
 
 # 2. Define LangGraph Agent State
@@ -73,7 +77,6 @@ class AgentState(TypedDict):
 def input_guardrail_node(state: AgentState) -> dict:
     """Verifies that the user prompt is safe before running retrieval."""
     logger.info("Starting input guardrail safety verification...")
-    model_name = GEMINI_MODEL if GEMINI_API_KEY else LM_STUDIO_MODEL
     is_safe, message = input_safety_check(state["query"], client, model_name)
     return {
         "is_safe": is_safe,
@@ -112,10 +115,9 @@ def synthesize_node(state: AgentState) -> dict:
         page_num = chunk.get("page_number", "?")
         context_str += f"\n[Document: {doc_title}, page {page_num}]\nContent: {chunk['content']}\n"
         
-    # Assemble cache-friendly system preamble and policy prompt
     system_prompt = """You are an expert regulated-domain insurance chatbot helper. You answer user queries based ONLY on the provided policy context.
 Strict Compliance Rules:
-1. Citation Enforcement: You MUST cite your sources. For every factual claim, append a bracketed citation pointing to the exact source anchor, e.g. [Document Title, page X] or [Reference, Section Y].
+1. Citation Enforcement: You MUST cite your sources. For every factual claim, append a bracketed citation pointing to the exact Source Anchor found at the end of the matching context content, such as [TX-WD-2026-V1, Section I, page 3] or [CA-WF-2026-V2, Section I, page 5]. Do not use generic placeholders or modify the anchors. You must use the literal Source Anchor from the text.
 2. Strict Context Boundary: Do not make up information. If the context does not contain the answer, say "I am sorry, but the provided documentation does not contain the information required to answer your query."
 3. No Role Leakage: Do not mention permissions, allowed roles, or jurisdictions to the user."""
 
@@ -128,41 +130,21 @@ Strict Compliance Rules:
 </query>
 Response:"""
 
-    if GEMINI_API_KEY:
-        try:
-            import google.generativeai as genai
-            model = genai.GenerativeModel(
-                model_name=GEMINI_MODEL,
-                system_instruction=system_prompt
-            )
-            response = model.generate_content(
-                user_prompt,
-                generation_config=genai.types.GenerationConfig(
-                    temperature=0.2,
-                    max_output_tokens=512
-                )
-            )
-            answer = response.text
-            return {"answer": answer}
-        except Exception as e:
-            logger.error(f"Gemini Synthesis failed: {e}")
-            return {"answer": f"Error: Gemini Synthesis failure. Details: {e}"}
-    else:
-        try:
-            response = client.chat.completions.create(
-                model=LM_STUDIO_MODEL,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                temperature=0.2, # Keep temperature low for facts
-                max_tokens=512
-            )
-            answer = response.choices[0].message.content
-            return {"answer": answer}
-        except Exception as e:
-            logger.error(f"Synthesis failed: {e}")
-            return {"answer": f"Error: Synthesis failure. Details: {e}"}
+    try:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            temperature=0.2, # Keep temperature low for facts
+            max_tokens=512
+        )
+        answer = response.choices[0].message.content
+        return {"answer": answer}
+    except Exception as e:
+        logger.error(f"Synthesis failed: {e}")
+        return {"answer": f"Error: Synthesis failure. Details: {e}"}
 
 def output_guardrail_node(state: AgentState) -> dict:
     """Validates citations in generated answer and scrubs PII."""

@@ -1,0 +1,1335 @@
+{
+  "results": [
+    {
+      "id": "GS-TX-1",
+      "query": "What is the limit for water damage in Texas",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-2",
+      "query": "What is the limit for water damage in Texas Please clarify.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-3",
+      "query": "What is the limit for water damage in Texas Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-4",
+      "query": "What is the limit for water damage in Texas for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-5",
+      "query": "What is the limit for water damage in Texas under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-6",
+      "query": "What is the limit for water damage in Texas",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-7",
+      "query": "What is the limit for water damage in Texas Please clarify.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-8",
+      "query": "What is the limit for water damage in Texas Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims under the water damage endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-9",
+      "query": "What is the limit for water damage in Texas for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-10",
+      "query": "What is the limit for water damage in Texas under the 2026 endorsement.",
+      "answer": "Under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-11",
+      "query": "What is the limit for water damage in Texas",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-12",
+      "query": "What is the limit for water damage in Texas Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-13",
+      "query": "What is the limit for water damage in Texas Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-14",
+      "query": "What is the limit for water damage in Texas for my house.",
+      "answer": "The limit of liability for water damage claims in Texas is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-15",
+      "query": "What is the limit for water damage in Texas under the 2026 endorsement.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-16",
+      "query": "How much does the water damage endorsement cover in TX",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-17",
+      "query": "How much does the water damage endorsement cover in TX Please clarify.",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-18",
+      "query": "How much does the water damage endorsement cover in TX Can you check the policy rules?",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].\n\nThe policy rules for coverage are as follows:\n*   **",
+      "citation_match": true,
+      "faithfulness": 0.6,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-19",
+      "query": "How much does the water damage endorsement cover in TX for my house.",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-20",
+      "query": "How much does the water damage endorsement cover in TX under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-21",
+      "query": "How much does the water damage endorsement cover in TX",
+      "answer": "The limit of liability for water damage claims under the water damage endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-22",
+      "query": "How much does the water damage endorsement cover in TX Please clarify.",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-23",
+      "query": "How much does the water damage endorsement cover in TX Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-24",
+      "query": "How much does the water damage endorsement cover in TX for my house.",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-25",
+      "query": "How much does the water damage endorsement cover in TX under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-26",
+      "query": "How much does the water damage endorsement cover in TX",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-27",
+      "query": "How much does the water damage endorsement cover in TX Please clarify.",
+      "answer": "Under the water damage endorsement in Texas, the limit of liability for claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-",
+      "citation_match": true,
+      "faithfulness": 0.4,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-28",
+      "query": "How much does the water damage endorsement cover in TX Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-29",
+      "query": "How much does the water damage endorsement cover in TX for my house.",
+      "answer": "Under the water damage endorsement in Texas, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-30",
+      "query": "How much does the water damage endorsement cover in TX under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement in Texas, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-31",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy",
+      "answer": "The limit of liability for water damage claims, which includes sudden and accidental discharge or overflow of water or steam from within a plumbing system, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-32",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Please clarify.",
+      "answer": "The limit of liability for water damage claims under the water damage endorsement is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-33",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-34",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-35",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-36",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy",
+      "answer": "The limit of liability for water damage claims under this endorsement, which covers sudden and accidental discharge or overflow of water or steam from within a plumbing system, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-37",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Please clarify.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-38",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims, which includes the sudden and accidental discharge or overflow of water or steam from within a plumbing system, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-",
+      "citation_match": true,
+      "faithfulness": 0.6,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-39",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-40",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims, which includes sudden and accidental discharge or overflow from within a plumbing system, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-41",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy",
+      "answer": "The limit of liability for water damage claims under the Texas homeowners policy is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.4
+    },
+    {
+      "id": "GS-TX-42",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-43",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-44",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy for my house.",
+      "answer": "The limit of liability for water damage claims under the Texas homeowners water damage endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-45",
+      "query": "What is the liability cap for plumbing leaks in Texas homeowners policy under the 2026 endorsement.",
+      "answer": "Under the Texas Homeowners Water Damage Policy endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.2
+    },
+    {
+      "id": "GS-TX-46",
+      "query": "Is there a limit of liability on water discharge claims in Texas",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-47",
+      "query": "Is there a limit of liability on water discharge claims in Texas Please clarify.",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-48",
+      "query": "Is there a limit of liability on water discharge claims in Texas Can you check the policy rules?",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-49",
+      "query": "Is there a limit of liability on water discharge claims in Texas for my house.",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-50",
+      "query": "Is there a limit of liability on water discharge claims in Texas under the 2026 endorsement.",
+      "answer": "Yes, under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-51",
+      "query": "Is there a limit of liability on water discharge claims in Texas",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-52",
+      "query": "Is there a limit of liability on water discharge claims in Texas Please clarify.",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-53",
+      "query": "Is there a limit of liability on water discharge claims in Texas Can you check the policy rules?",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-54",
+      "query": "Is there a limit of liability on water discharge claims in Texas for my house.",
+      "answer": "Yes, the limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-55",
+      "query": "Is there a limit of liability on water discharge claims in Texas under the 2026 endorsement.",
+      "answer": "Yes, under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-56",
+      "query": "Is there a limit of liability on water discharge claims in Texas",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-57",
+      "query": "Is there a limit of liability on water discharge claims in Texas Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-58",
+      "query": "Is there a limit of liability on water discharge claims in Texas Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-59",
+      "query": "Is there a limit of liability on water discharge claims in Texas for my house.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-60",
+      "query": "Is there a limit of liability on water discharge claims in Texas under the 2026 endorsement.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-61",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX",
+      "answer": "Under the water damage endorsement, coverage is provided for the sudden and accidental overflow or discharge of steam or water from within a household appliance or a plumbing, automatic fire protective sprinkler, heating, or air conditioning system [TX-WD-2026-V1, Section I, page 3]. The limit of liability for these claims is $10,000 per occurrence, which applies to loss of use, personal property, and damage",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-62",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX Please clarify.",
+      "answer": "Under the water damage endorsement, coverage is provided for the sudden and accidental overflow or discharge of steam or water from within a household appliance or a plumbing, automatic fire protective sprinkler, air conditioning, or heating system [TX-WD-2026-V1, Section I, page 3]. \n\nThe limit of liability for these claims is $10,000 per occurrence, which applies to loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-63",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-64",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX for my house.",
+      "answer": "Under the water damage endorsement, coverage is provided for the sudden and accidental discharge or overflow of water or steam from within a household appliance or a plumbing, heating, air conditioning, or automatic fire protective sprinkler system [TX-WD-2026-V1, Section I, page 3]. The limit of liability for these claims is $10,000 per occurrence, which applies to loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-65",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, coverage is provided for the sudden and accidental overflow or discharge of steam or water from within a household appliance or a plumbing, air conditioning, heating, or automatic fire protective sprinkler system [TX-WD-2026-V1, Section I, page 3]. This coverage applies to loss of use, personal property, and damage",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-66",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX",
+      "answer": "Under the water damage endorsement, coverage is provided for the sudden and accidental discharge or overflow of water or steam from within a household appliance or a plumbing, heating, air conditioning, or automatic fire protective sprinkler system [TX-WD-2026-V1, Section I, page 3]. The limit of liability for these claims is $10,000 per occurrence, which applies to loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-67",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-68",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-69",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX for my house.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-70",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, coverage is provided for the sudden and accidental discharge or overflow of steam or water from within a household appliance or a plumbing, automatic fire protective sprinkler, heating, or air conditioning system [TX-WD-2026-V1, Section I, page 3]. The limit of liability for these claims is $10,000 per occurrence, which applies to loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I,",
+      "citation_match": true,
+      "faithfulness": 0.4,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-71",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX",
+      "answer": "In Texas, the water damage endorsement covers the sudden and accidental overflow or discharge of steam or water from within a household appliance or a plumbing, automatic fire protective sprinkler, air conditioning, or heating system [TX-WD-2026-V1, Section I, page 3]. This coverage applies to loss of use, personal property, and damage to the dwelling",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-72",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-73",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-74",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX for my house.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-75",
+      "query": "What does the water damage endorsement cover for plumbing overflow in TX under the 2026 endorsement.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-76",
+      "query": "How much will I get paid for water damage under the Texas policy",
+      "answer": "Under the Texas policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-77",
+      "query": "How much will I get paid for water damage under the Texas policy Please clarify.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-78",
+      "query": "How much will I get paid for water damage under the Texas policy Can you check the policy rules?",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].\n\nThe policy rules for coverage are as follows:\n*   **Covered Perils:** Coverage is provided for sudden and accidental discharge or overflow of water or steam from within a household appliance or a plumbing, heating, air conditioning, or automatic fire protective sprinkler system [TX-WD-2026-V1",
+      "citation_match": true,
+      "faithfulness": 0.4,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-79",
+      "query": "How much will I get paid for water damage under the Texas policy for my house.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-80",
+      "query": "How much will I get paid for water damage under the Texas policy under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-81",
+      "query": "How much will I get paid for water damage under the Texas policy",
+      "answer": "Under the Texas policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-82",
+      "query": "How much will I get paid for water damage under the Texas policy Please clarify.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-83",
+      "query": "How much will I get paid for water damage under the Texas policy Can you check the policy rules?",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-84",
+      "query": "How much will I get paid for water damage under the Texas policy for my house.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-85",
+      "query": "How much will I get paid for water damage under the Texas policy under the 2026 endorsement.",
+      "answer": "Under the Texas Homeowners Water Damage Endorsement (TX-WD-2026-V1), the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-86",
+      "query": "How much will I get paid for water damage under the Texas policy",
+      "answer": "Under the Texas policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-87",
+      "query": "How much will I get paid for water damage under the Texas policy Please clarify.",
+      "answer": "Under the Texas policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.4
+    },
+    {
+      "id": "GS-TX-88",
+      "query": "How much will I get paid for water damage under the Texas policy Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-89",
+      "query": "How much will I get paid for water damage under the Texas policy for my house.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section",
+      "citation_match": true,
+      "faithfulness": 0.4,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-90",
+      "query": "How much will I get paid for water damage under the Texas policy under the 2026 endorsement.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-91",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-92",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage Please clarify.",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-93",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Policy is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use resulting from the sudden and accidental discharge or overflow of water or steam from within a household appliance or a plumbing, heating, air conditioning, or automatic fire protective sprinkler system [TX-WD-2",
+      "citation_match": true,
+      "faithfulness": 0.2,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-94",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-95",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-96",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-97",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage Please clarify.",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-98",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Endorsement is $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].\n\nRegarding policy rules, coverage is provided for the sudden",
+      "citation_match": true,
+      "faithfulness": 0.6,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-99",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage for my house.",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-100",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-101",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage",
+      "answer": "The limit of liability for water damage claims under the Texas homeowners water damage endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-102",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage Please clarify.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-103",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-104",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage for my house.",
+      "answer": "Under the Texas Homeowners Water Damage Policy, the limit of liability for water damage claims, including the sudden and accidental discharge or overflow of water or steam from within a plumbing system, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 0.6,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-105",
+      "query": "What is the Texas homeowners policy limit for plumbing water damage under the 2026 endorsement.",
+      "answer": "Under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-106",
+      "query": "Tell me the Texas limit for sudden water overflow claims.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.6
+    },
+    {
+      "id": "GS-TX-107",
+      "query": "Tell me the Texas limit for sudden water overflow claims. Please clarify.",
+      "answer": "For sudden and accidental discharge or overflow of water or steam from within a household appliance or a plumbing, heating, air conditioning, or automatic fire protective sprinkler system, the limit of liability is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-108",
+      "query": "Tell me the Texas limit for sudden water overflow claims. Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam from within a household appliance or a plumbing, heating, air conditioning, or automatic fire protective sprinkler system is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-109",
+      "query": "Tell me the Texas limit for sudden water overflow claims. for my house.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-110",
+      "query": "Tell me the Texas limit for sudden water overflow claims. under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims, which includes sudden and accidental discharge or overflow of water or steam, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.6
+    },
+    {
+      "id": "GS-TX-111",
+      "query": "Tell me the Texas limit for sudden water overflow claims.",
+      "answer": "The limit of liability for water damage claims involving the sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-112",
+      "query": "Tell me the Texas limit for sudden water overflow claims. Please clarify.",
+      "answer": "For sudden and accidental discharge or overflow of water or steam from a household appliance or from within an automatic fire protective sprinkler system, heating, air conditioning, or plumbing system, the limit of liability is $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to loss of use, personal property, and all damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-113",
+      "query": "Tell me the Texas limit for sudden water overflow claims. Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam from a household appliance or within a plumbing, heating, air conditioning, or automatic fire protective sprinkler system is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-114",
+      "query": "Tell me the Texas limit for sudden water overflow claims. for my house.",
+      "answer": "The limit of liability for water damage claims involving the sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-115",
+      "query": "Tell me the Texas limit for sudden water overflow claims. under the 2026 endorsement.",
+      "answer": "Under the 2026 water damage endorsement, the limit of liability for water damage claims, which includes sudden and accidental discharge or overflow of water or steam, is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.6
+    },
+    {
+      "id": "GS-TX-116",
+      "query": "Tell me the Texas limit for sudden water overflow claims.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.6
+    },
+    {
+      "id": "GS-TX-117",
+      "query": "Tell me the Texas limit for sudden water overflow claims. Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-118",
+      "query": "Tell me the Texas limit for sudden water overflow claims. Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-119",
+      "query": "Tell me the Texas limit for sudden water overflow claims. for my house.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-120",
+      "query": "Tell me the Texas limit for sudden water overflow claims. under the 2026 endorsement.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-121",
+      "query": "What is the cap on accidental water discharge in Texas",
+      "answer": "The limit of liability for water damage claims involving the sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-122",
+      "query": "What is the cap on accidental water discharge in Texas Please clarify.",
+      "answer": "The limit of liability for water damage claims involving the sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This cap applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-123",
+      "query": "What is the cap on accidental water discharge in Texas Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam from a household appliance or within a plumbing, heating, air conditioning, or automatic fire protective sprinkler system is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This cap applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-124",
+      "query": "What is the cap on accidental water discharge in Texas for my house.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-125",
+      "query": "What is the cap on accidental water discharge in Texas under the 2026 endorsement.",
+      "answer": "Under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-126",
+      "query": "What is the cap on accidental water discharge in Texas",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.6
+    },
+    {
+      "id": "GS-TX-127",
+      "query": "What is the cap on accidental water discharge in Texas Please clarify.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This cap applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-128",
+      "query": "What is the cap on accidental water discharge in Texas Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This cap applies to all loss of use, personal property, and damage to the dwelling [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-129",
+      "query": "What is the cap on accidental water discharge in Texas for my house.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-130",
+      "query": "What is the cap on accidental water discharge in Texas under the 2026 endorsement.",
+      "answer": "Under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-131",
+      "query": "What is the cap on accidental water discharge in Texas",
+      "answer": "The limit of liability for water damage claims in Texas is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-132",
+      "query": "What is the cap on accidental water discharge in Texas Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-133",
+      "query": "What is the cap on accidental water discharge in Texas Can you check the policy rules?",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-134",
+      "query": "What is the cap on accidental water discharge in Texas for my house.",
+      "answer": "The limit of liability for water damage claims involving sudden and accidental discharge or overflow of water or steam in Texas is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-135",
+      "query": "What is the cap on accidental water discharge in Texas under the 2026 endorsement.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-136",
+      "query": "How much liability coverage do I have for water damage in TX",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-137",
+      "query": "How much liability coverage do I have for water damage in TX Please clarify.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-138",
+      "query": "How much liability coverage do I have for water damage in TX Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3]. This limit applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-139",
+      "query": "How much liability coverage do I have for water damage in TX for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-140",
+      "query": "How much liability coverage do I have for water damage in TX under the 2026 endorsement.",
+      "answer": "Under the 2026 endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-141",
+      "query": "How much liability coverage do I have for water damage in TX",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-142",
+      "query": "How much liability coverage do I have for water damage in TX Please clarify.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-143",
+      "query": "How much liability coverage do I have for water damage in TX Can you check the policy rules?",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-144",
+      "query": "How much liability coverage do I have for water damage in TX for my house.",
+      "answer": "The limit of liability for water damage claims under this endorsement is restricted to $10,000 per occurrence, which applies to all damage to the dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-145",
+      "query": "How much liability coverage do I have for water damage in TX under the 2026 endorsement.",
+      "answer": "Under the water damage endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-TX-146",
+      "query": "How much liability coverage do I have for water damage in TX",
+      "answer": "The limit of liability for water damage claims under the Texas Homeowners Water Damage Policy is restricted to $10,000 per occurrence, which applies to all damage to dwelling, personal property, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-147",
+      "query": "How much liability coverage do I have for water damage in TX Please clarify.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-148",
+      "query": "How much liability coverage do I have for water damage in TX Can you check the policy rules?",
+      "answer": "Under the water damage endorsement for Texas, the limit of liability for water damage claims is restricted to $10,000 per occurrence, which applies to all damage to personal property, dwelling, and loss of use [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-TX-149",
+      "query": "How much liability coverage do I have for water damage in TX for my house.",
+      "answer": "Refusal: The generated answer contains unverifiable citations ['No citations provided in the answer.'] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.2,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-TX-150",
+      "query": "How much liability coverage do I have for water damage in TX under the 2026 endorsement.",
+      "answer": "Under the Texas Homeowners Water Damage Policy endorsement, the limit of liability for water damage claims is restricted to $10,000 per occurrence [TX-WD-2026-V1, Section I, page 3].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.2
+    },
+    {
+      "id": "GS-CA-151",
+      "query": "What is the wildfire mitigation limit in California",
+      "answer": "The limit of liability for wildfire mitigation and structural damage under this endorsement is $250,000 per occurrence [CA-WF-2026-V2, Section I, page 5].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-CA-152",
+      "query": "What is the wildfire mitigation limit in California immediately.",
+      "answer": "The limit of liability for wildfire mitigation and structural damage under this endorsement is $250,000 per occurrence [CA-WF-2026-V2, Section I, page 5].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.8
+    },
+    {
+      "id": "GS-CA-153",
+      "query": "What is the wildfire mitigation limit in California as soon as possible.",
+      "answer": "The limit of liability for wildfire mitigation and structural damage under this endorsement is $250,000 per occurrence [CA-WF-2026-V2, Section I, page 5].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-154",
+      "query": "What is the wildfire mitigation limit in California based on CA-WF-2026-V2.",
+      "answer": "The limit of liability for wildfire mitigation and structural damage under the CA-WF-2026-V2 endorsement is $250,000 per occurrence [CA-WF-2026-V2, Section I, page 5].",
+      "citation_match": true,
+      "faithfulness": 1.0,
+      "correctness": 1.0
+    },
+    {
+      "id": "GS-CA-155",
+      "query": "What is the wildfire mitigation limit in California under state guidelines.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 49.101889231s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemma-4-31b', 'location': 'global'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 1.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-156",
+      "query": "What is the wildfire mitigation limit in California",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 19.984246996s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemma-4-31b', 'location': 'global'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-157",
+      "query": "What is the wildfire mitigation limit in California immediately.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 54.617766804s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-158",
+      "query": "What is the wildfire mitigation limit in California as soon as possible.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 24.53690124s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-159",
+      "query": "What is the wildfire mitigation limit in California based on CA-WF-2026-V2.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 1.819383558s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-160",
+      "query": "What is the wildfire mitigation limit in California under state guidelines.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 31.347399661s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-161",
+      "query": "Does the California wildfire endorsement cover private defense services",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 2.516218975s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-162",
+      "query": "Does the California wildfire endorsement cover private defense services immediately.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 30.401978895s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-163",
+      "query": "Does the California wildfire endorsement cover private defense services as soon as possible.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 1.550408161s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-164",
+      "query": "Does the California wildfire endorsement cover private defense services based on CA-WF-2026-V2.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 29.958043666s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-165",
+      "query": "Does the California wildfire endorsement cover private defense services under state guidelines.",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 55.727001667s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemma-4-31b'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    },
+    {
+      "id": "GS-CA-166",
+      "query": "Does the California wildfire endorsement cover private defense services",
+      "answer": "Refusal: The generated answer contains unverifiable citations [\"{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 1500, model: gemma-4-31b\\\\nPlease retry in 26.149547472s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}\", \"{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemma-4-31b', 'location': 'global'}, 'quotaValue': '1500'}\"] or is missing citations. Please revise query.",
+      "citation_match": false,
+      "faithfulness": 0.0,
+      "correctness": 0.0
+    }
+  ],
+  "exact_citations_count": 119,
+  "total_faithfulness": 139.2,
+  "total_correctness": 106.19999999999995
+}
