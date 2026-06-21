@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 
 # Import the ingestion functions and the progress registry
 from scripts.ingest import ingest_document, ingestion_tasks
+from agent.graph import run_rag_agent
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -104,6 +105,43 @@ async def get_progress(task_id: str):
     if not task:
         return JSONResponse(status_code=404, content={"error": "Task not found"})
     return JSONResponse(content=task)
+
+@app.post("/api/query")
+async def query_rag(
+    query: str = Form(...),
+    role: str = Form(...),
+    jurisdiction: str = Form(...)
+):
+    # Parse lists
+    roles = [r.strip() for r in role.split(",") if r.strip()]
+    jurs = [j.strip() for j in jurisdiction.split(",") if j.strip()]
+
+    if not roles or not jurs:
+        raise HTTPException(status_code=400, detail="Must provide at least one role and jurisdiction.")
+
+    logger.info(f"RAG Playground Query: '{query}' | Roles: {roles} | Jurisdictions: {jurs}")
+    try:
+        # Execute the RAG pipeline graph
+        state = run_rag_agent(query, roles, jurs)
+        return JSONResponse(content={
+            "answer": state.get("answer", ""),
+            "is_safe": state.get("is_safe", True),
+            "safety_message": state.get("safety_message", ""),
+            "broken_citations": state.get("broken_citations", []),
+            "retrieved_count": len(state.get("retrieved_chunks", [])),
+            "reranked_chunks": [
+                {
+                    "content": c.get("content", ""),
+                    "doc_title": c.get("doc_title", "Unknown Policy"),
+                    "page_number": c.get("page_number", "?"),
+                    "score": c.get("rerank_score", 0.0)
+                }
+                for c in state.get("reranked_chunks", [])
+            ]
+        })
+    except Exception as e:
+        logger.error(f"RAG agent query failed: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn

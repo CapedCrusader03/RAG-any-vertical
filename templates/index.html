@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAG Ingestion Portal</title>
+    <title>RAG Ingestion & Playground Portal</title>
     <!-- Google Fonts: Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
         }
 
         header {
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -85,6 +85,42 @@
             max-width: 500px;
         }
 
+        /* Tabs Selection */
+        .tabs-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.4rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-glow);
+            color: var(--text-main);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+        }
+
+        /* Main Container grids */
         .main-container {
             width: 100%;
             max-width: 1100px;
@@ -135,7 +171,7 @@
             font-weight: 500;
         }
 
-        input[type="text"], input[type="url"] {
+        input[type="text"], input[type="url"], textarea {
             width: 100%;
             padding: 0.8rem 1rem;
             background: rgba(10, 10, 15, 0.6);
@@ -147,7 +183,7 @@
             transition: all 0.2s ease;
         }
 
-        input[type="text"]:focus, input[type="url"]:focus {
+        input[type="text"]:focus, input[type="url"]:focus, textarea:focus {
             outline: none;
             border-color: var(--accent-purple);
             box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
@@ -278,7 +314,7 @@
             transform: translateY(1px);
         }
 
-        /* Column 2: Ingestion progress */
+        /* Ingestion progress */
         .progress-container {
             display: flex;
             flex-direction: column;
@@ -302,6 +338,12 @@
             border: 1px solid var(--border-color);
         }
 
+        .status-badge.idle {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border-color: var(--border-color);
+        }
+
         .status-badge.pending {
             background: rgba(245, 158, 11, 0.1);
             color: var(--status-yellow);
@@ -310,7 +352,7 @@
 
         .status-badge.processing {
             background: rgba(59, 130, 246, 0.1);
-            color: var(--status-blue);
+            color: var(--accent-blue);
             border-color: rgba(59, 130, 246, 0.2);
         }
 
@@ -404,6 +446,20 @@
             margin-bottom: 0.5rem;
             opacity: 0.5;
         }
+
+        /* Answer Output box */
+        .answer-output-box {
+            background: rgba(10, 10, 15, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            min-height: 120px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            white-space: pre-wrap;
+            transition: border-color 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -416,7 +472,14 @@
         <div class="subtitle">Compliance-Aware Document Ingestion & Vector Indexing Engine</div>
     </header>
 
-    <div class="main-container">
+    <!-- Navigation Tabs -->
+    <div class="tabs-container">
+        <button class="tab-btn active" id="btn-ingest" onclick="switchTab('ingest')">Document Ingestion</button>
+        <button class="tab-btn" id="btn-chat" onclick="switchTab('chat')">RAG Chat Playground</button>
+    </div>
+
+    <!-- Tab 1: Document Ingestion -->
+    <div class="main-container" id="ingest-tab">
         <!-- Ingestion Form -->
         <div class="glass-card">
             <h2 class="form-title">
@@ -476,6 +539,9 @@
                             <input type="checkbox" name="jur" value="US-CA" checked> US-CA
                         </label>
                         <label class="tag-pill">
+                            <input type="checkbox" name="jur" value="US-NC"> US-NC
+                        </label>
+                        <label class="tag-pill">
                             <input type="checkbox" name="jur" value="US-FL"> US-FL
                         </label>
                         <label class="tag-pill">
@@ -494,7 +560,7 @@
         <div class="glass-card progress-container">
             <div class="progress-header">
                 <h2 class="form-title" style="margin-bottom: 0;">Ingestion Progress</h2>
-                <span class="status-badge" id="statusBadge">IDLE</span>
+                <span class="status-badge idle" id="statusBadge">IDLE</span>
             </div>
 
             <!-- Progress Bar -->
@@ -521,24 +587,168 @@
         </div>
     </div>
 
+    <!-- Tab 2: RAG Chat Playground -->
+    <div class="main-container" id="chat-tab" style="display: none;">
+        <!-- Query Form -->
+        <div class="glass-card">
+            <h2 class="form-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                RAG Query Playground
+            </h2>
+
+            <form id="chatForm">
+                <!-- Text Area Query -->
+                <div class="form-group">
+                    <label for="chatQuery">Your Question</label>
+                    <textarea id="chatQuery" name="query" rows="5" placeholder="e.g. What is the Texas water limit?" required></textarea>
+                </div>
+
+                <!-- Radio User Role -->
+                <div class="form-group">
+                    <label>Execute As Role (User Credentials)</label>
+                    <div class="tag-select-container" id="chatRolesContainer">
+                        <label class="tag-pill active">
+                            <input type="radio" name="chatRole" value="underwriter" checked> underwriter
+                        </label>
+                        <label class="tag-pill">
+                            <input type="radio" name="chatRole" value="agent"> agent
+                        </label>
+                        <label class="tag-pill">
+                            <input type="radio" name="chatRole" value="guest"> guest
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Radio User Jurisdiction -->
+                <div class="form-group">
+                    <label>Execute in Jurisdiction (User Credentials)</label>
+                    <div class="tag-select-container" id="chatJursContainer">
+                        <label class="tag-pill active">
+                            <input type="radio" name="chatJur" value="US-TX" checked> US-TX
+                        </label>
+                        <label class="tag-pill">
+                            <input type="radio" name="chatJur" value="US-CA"> US-CA
+                        </label>
+                        <label class="tag-pill">
+                            <input type="radio" name="chatJur" value="US-NC"> US-NC
+                        </label>
+                        <label class="tag-pill">
+                            <input type="radio" name="chatJur" value="US-FL"> US-FL
+                        </label>
+                        <label class="tag-pill">
+                            <input type="radio" name="chatJur" value="US-NY"> US-NY
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="chatSubmitBtn">
+                    <span>Ask RAG Compliance Agent</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Chat Response Panel -->
+        <div class="glass-card progress-container">
+            <div class="progress-header">
+                <h2 class="form-title" style="margin-bottom: 0;">Agent Response</h2>
+                <span class="status-badge idle" id="chatStatusBadge">IDLE</span>
+            </div>
+
+            <!-- Answer Box -->
+            <div>
+                <label style="margin-bottom: 0.5rem;">Synthesized Answer</label>
+                <div class="answer-output-box" id="answerBox">
+                    <span style="color: var(--text-secondary); font-style: italic;">Results will display here after sending a query.</span>
+                </div>
+            </div>
+
+            <!-- Trace Execution Logs -->
+            <div>
+                <label style="margin-bottom: 0.5rem;">Orchestration Trace Logs</label>
+                <div class="logs-panel" id="chatLogsPanel" style="height: 180px;">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🧠</div>
+                        <div>Trace execution path (Guardrails, pgvector queries, rerank details) will be outputted here.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Core Dropzone logic
+        // Tab switching logic
+        function switchTab(tab) {
+            const ingestTab = document.getElementById('ingest-tab');
+            const chatTab = document.getElementById('chat-tab');
+            const btnIngest = document.getElementById('btn-ingest');
+            const btnChat = document.getElementById('btn-chat');
+
+            if (tab === 'ingest') {
+                ingestTab.style.display = 'grid';
+                chatTab.style.display = 'none';
+                btnIngest.classList.add('active');
+                btnChat.classList.remove('active');
+            } else {
+                ingestTab.style.display = 'none';
+                chatTab.style.display = 'grid';
+                btnIngest.classList.remove('active');
+                btnChat.classList.add('active');
+            }
+        }
+
+        // Initialize checkbox active styling
+        function initCheckboxPills(containerId) {
+            const container = document.getElementById(containerId);
+            const labels = container.querySelectorAll('.tag-pill');
+            labels.forEach(label => {
+                const checkbox = label.querySelector('input');
+                label.addEventListener('click', () => {
+                    setTimeout(() => {
+                        if (checkbox.checked) {
+                            label.classList.add('active');
+                        } else {
+                            label.classList.remove('active');
+                        }
+                    }, 20);
+                });
+            });
+        }
+
+        // Initialize radio active styling (only one active at a time)
+        function initRadioPills(containerId) {
+            const container = document.getElementById(containerId);
+            const labels = container.querySelectorAll('.tag-pill');
+            labels.forEach(label => {
+                const radio = label.querySelector('input');
+                label.addEventListener('click', () => {
+                    setTimeout(() => {
+                        labels.forEach(l => l.classList.remove('active'));
+                        if (radio.checked) {
+                            label.classList.add('active');
+                        }
+                    }, 20);
+                });
+            });
+        }
+
+        // Initialize Tag Pills UI listeners
+        initCheckboxPills('rolesContainer');
+        initCheckboxPills('jursContainer');
+        initRadioPills('chatRolesContainer');
+        initRadioPills('chatJursContainer');
+
+        // Dropzone logic
         const dropzone = document.getElementById('dropzone');
         const fileInput = document.getElementById('fileInput');
         const fileInfo = document.getElementById('fileInfo');
         const fileName = document.getElementById('fileName');
 
         dropzone.addEventListener('click', () => fileInput.click());
-
         dropzone.addEventListener('dragover', (e) => {
             e.preventDefault();
             dropzone.classList.add('dragover');
         });
-
-        dropzone.addEventListener('dragleave', () => {
-            dropzone.classList.remove('dragover');
-        });
-
+        dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
         dropzone.addEventListener('drop', (e) => {
             e.preventDefault();
             dropzone.classList.remove('dragover');
@@ -547,15 +757,12 @@
                 updateFileDisplay();
             }
         });
-
         fileInput.addEventListener('change', updateFileDisplay);
 
         function updateFileDisplay() {
             if (fileInput.files.length) {
                 fileName.textContent = fileInput.files[0].name;
                 fileInfo.style.display = 'flex';
-                
-                // Auto-fill Document Title if empty
                 const titleInput = document.getElementById('title');
                 if (!titleInput.value) {
                     const baseName = fileInput.files[0].name.replace(/\.[^/.]+$/, "");
@@ -566,23 +773,8 @@
             }
         }
 
-        // Pill Selection states
-        document.querySelectorAll('.tag-pill').forEach(pill => {
-            const checkbox = pill.querySelector('input');
-            pill.addEventListener('click', (e) => {
-                // Let the browser handle standard input checkbox toggle, just capture UI update
-                setTimeout(() => {
-                    if (checkbox.checked) {
-                        pill.classList.add('active');
-                    } else {
-                        pill.classList.remove('active');
-                    }
-                }, 10);
-            });
-        });
-
-        // Submit form and poll progress API
-        const form = document.getElementById('uploadForm');
+        // Forms and polling API handles
+        const uploadForm = document.getElementById('uploadForm');
         const submitBtn = document.getElementById('submitBtn');
         const statusBadge = document.getElementById('statusBadge');
         const progressBar = document.getElementById('progressBar');
@@ -592,20 +784,19 @@
         let activeTaskId = null;
         let pollInterval = null;
 
-        form.addEventListener('submit', async (e) => {
+        // Ingestion submit logic
+        uploadForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-
             if (!fileInput.files.length) {
                 alert("Please select or drop a file first.");
                 return;
             }
 
-            // Gather roles
-            const checkedRoles = Array.from(document.querySelectorAll('input[name="role"]:checked')).map(el => el.value);
-            const checkedJurs = Array.from(document.querySelectorAll('input[name="jur"]:checked')).map(el => el.value);
+            const checkedRoles = Array.from(document.querySelectorAll('#rolesContainer input:checked')).map(el => el.value);
+            const checkedJurs = Array.from(document.querySelectorAll('#jursContainer input:checked')).map(el => el.value);
 
             if (checkedRoles.length === 0 || checkedJurs.length === 0) {
-                alert("Please select at least one role and one jurisdiction for access control.");
+                alert("Select at least one allowed Role and one allowed Jurisdiction.");
                 return;
             }
 
@@ -616,25 +807,22 @@
             formData.append("roles", checkedRoles.join(","));
             formData.append("jurisdictions", checkedJurs.join(","));
 
-            // Initialize Progress UI
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.7';
-            submitBtn.querySelector('span').textContent = 'Uploading...';
+            submitBtn.querySelector('span').textContent = 'Uploading file...';
             
             statusBadge.className = 'status-badge pending';
             statusBadge.textContent = 'PENDING';
             progressBar.style.width = '5%';
             percentText.textContent = '5%';
-            
             logsPanel.innerHTML = '';
-            addLogLine("Local Server", "Uploading document and metadata to corpus directory...");
+            addLogLine(logsPanel, "Local Server", "Writing document binary and parsing metadata configuration...");
 
             try {
                 const response = await fetch('/api/upload', {
                     method: 'POST',
                     body: formData
                 });
-
                 if (!response.ok) {
                     const errDetail = await response.json();
                     throw new Error(errDetail.detail || "Server error occurred");
@@ -642,13 +830,12 @@
 
                 const result = await response.json();
                 activeTaskId = result.task_id;
-                addLogLine("Local Server", `Upload complete. Scheduled background task: ${activeTaskId}`);
+                addLogLine(logsPanel, "Local Server", `Upload successful. Running background pipeline task: ${activeTaskId}`);
                 
-                // Start Polling progress
                 if (pollInterval) clearInterval(pollInterval);
                 pollInterval = setInterval(pollProgress, 1000);
             } catch (err) {
-                addLogLine("Error", err.message, true);
+                addLogLine(logsPanel, "Error", err.message, true);
                 statusBadge.className = 'status-badge failed';
                 statusBadge.textContent = 'FAILED';
                 submitBtn.disabled = false;
@@ -659,22 +846,17 @@
 
         async function pollProgress() {
             if (!activeTaskId) return;
-
             try {
                 const response = await fetch(`/api/progress/${activeTaskId}`);
                 if (!response.ok) return;
-
                 const data = await response.json();
                 
-                // Update UI state
                 statusBadge.className = `status-badge ${data.state}`;
                 statusBadge.textContent = data.state.toUpperCase();
-                
                 progressBar.style.width = `${data.percentage}%`;
                 percentText.textContent = `${data.percentage}%`;
                 
-                // Append log lines if not redundant
-                addLogLine("Ingestion Pipeline", data.log, data.state === 'failed', data.state === 'completed');
+                addLogLine(logsPanel, "Ingestion Pipeline", data.log, data.state === 'failed', data.state === 'completed');
 
                 if (data.state === 'completed' || data.state === 'failed') {
                     clearInterval(pollInterval);
@@ -683,14 +865,117 @@
                     submitBtn.querySelector('span').textContent = 'Begin Layout-Aware Ingestion';
                 }
             } catch (e) {
-                console.error("Failed to poll progress", e);
+                console.error(e);
             }
         }
 
-        let lastLog = "";
-        function addLogLine(sender, message, isError = false, isSuccess = false) {
-            if (message === lastLog) return;
-            lastLog = message;
+        // RAG Chat Playground submit logic
+        const chatForm = document.getElementById('chatForm');
+        const chatSubmitBtn = document.getElementById('chatSubmitBtn');
+        const chatStatusBadge = document.getElementById('chatStatusBadge');
+        const answerBox = document.getElementById('answerBox');
+        const chatLogsPanel = document.getElementById('chatLogsPanel');
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const query = document.getElementById('chatQuery').value;
+            const selectedRole = document.querySelector('input[name="chatRole"]:checked').value;
+            const selectedJur = document.querySelector('input[name="chatJur"]:checked').value;
+
+            chatSubmitBtn.disabled = true;
+            chatSubmitBtn.style.opacity = '0.7';
+            chatSubmitBtn.querySelector('span').textContent = 'Thinking...';
+            chatStatusBadge.className = 'status-badge processing';
+            chatStatusBadge.textContent = 'RUNNING';
+
+            chatLogsPanel.innerHTML = '';
+            answerBox.innerHTML = '<span style="color: var(--text-secondary); font-style: italic;">Synthesizing response from vector index...</span>';
+
+            addLogLine(chatLogsPanel, "RAG Orchestrator", `Query submitted: "${query}"`);
+            addLogLine(chatLogsPanel, "RAG Orchestrator", `Running on credentials: [Role: ${selectedRole}] [Jurisdiction: ${selectedJur}]`);
+
+            const formData = new FormData();
+            formData.append("query", query);
+            formData.append("role", selectedRole);
+            formData.append("jurisdiction", selectedJur);
+
+            try {
+                // Step 1: Input Guardrail Check Log
+                addLogLine(chatLogsPanel, "Span: input_guardrail", "Running safety verification checks on user prompt...");
+                
+                const response = await fetch('/api/query', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errDetail = await response.json();
+                    throw new Error(errDetail.detail || "Orchestrator failed to process request.");
+                }
+
+                const result = await response.json();
+
+                // Step 2: Ingest logs dynamically based on states returned
+                if (!result.is_safe) {
+                    addLogLine(chatLogsPanel, "Span: input_guardrail", `Prompt Rejected: ${result.safety_message}`, true);
+                    chatStatusBadge.className = 'status-badge failed';
+                    chatStatusBadge.textContent = 'UNSAFE';
+                    answerBox.innerHTML = `<span style="color: var(--status-red); font-weight: 600;">Safety Exception:</span> ${result.answer}`;
+                } else {
+                    addLogLine(chatLogsPanel, "Span: input_guardrail", "Prompt safety verification passed.", false, true);
+                    
+                    // Step 3: Retrieval Logs
+                    addLogLine(chatLogsPanel, "Span: retrieve", `Retrieving dense & sparse records with pre-filters... Found ${result.retrieved_count} candidate chunks.`);
+                    
+                    // Step 4: Reranking Logs
+                    addLogLine(chatLogsPanel, "Span: rerank", `Executing BGE Reranker. Retained top ${result.reranked_chunks.length} high-confidence chunks.`);
+                    result.reranked_chunks.forEach((chunk, i) => {
+                        addLogLine(chatLogsPanel, "bge-reranker", `[Rank ${i+1}] Title: "${chunk.doc_title}" (page ${chunk.page_number}) | Score: ${chunk.score.toFixed(4)}`);
+                    });
+
+                    // Step 5: Synthesis Logs
+                    addLogLine(chatLogsPanel, "Span: synthesize", "Submitting structured prompt context to LLM client...");
+
+                    // Step 6: Output Guardrail logs
+                    addLogLine(chatLogsPanel, "Span: output_guardrail", "Running PII scrubber and verifying citation anchors...");
+
+                    if (result.broken_citations.length > 0) {
+                        addLogLine(chatLogsPanel, "output_guardrail", `Rejected broken citations: ${result.broken_citations.join(", ")}`, true);
+                        chatStatusBadge.className = 'status-badge failed';
+                        chatStatusBadge.textContent = 'BLOCKED';
+                    } else {
+                        addLogLine(chatLogsPanel, "output_guardrail", "Citation integrity and PII scrub passed.", false, true);
+                        chatStatusBadge.className = 'status-badge completed';
+                        chatStatusBadge.textContent = 'COMPLETED';
+                    }
+
+                    // Format Answer (bold citations)
+                    let formattedAnswer = result.answer;
+                    // regex to find bracketed citations like [Document Title, page X]
+                    formattedAnswer = formattedAnswer.replace(/(\[[^\]]+\])/g, '<strong style="color: var(--accent-purple);">$1</strong>');
+                    answerBox.innerHTML = formattedAnswer;
+                }
+
+            } catch (err) {
+                addLogLine(chatLogsPanel, "Error", err.message, true);
+                chatStatusBadge.className = 'status-badge failed';
+                chatStatusBadge.textContent = 'ERROR';
+                answerBox.innerHTML = `<span style="color: var(--status-red);">Execution Error:</span> ${err.message}`;
+            } finally {
+                chatSubmitBtn.disabled = false;
+                chatSubmitBtn.style.opacity = '1';
+                chatSubmitBtn.querySelector('span').textContent = 'Ask RAG Compliance Agent';
+            }
+        });
+
+        // Common logging utility
+        let lastLogs = {};
+        function addLogLine(panel, sender, message, isError = false, isSuccess = false) {
+            const panelId = panel.id;
+            if (!lastLogs[panelId]) lastLogs[panelId] = "";
+            if (message === lastLogs[panelId]) return;
+            lastLogs[panelId] = message;
 
             const timeStr = new Date().toLocaleTimeString();
             const line = document.createElement('div');
@@ -706,8 +991,8 @@
                 <span class="log-text ${colorClass}">${message}</span>
             `;
             
-            logsPanel.appendChild(line);
-            logsPanel.scrollTop = logsPanel.scrollHeight;
+            panel.appendChild(line);
+            panel.scrollTop = panel.scrollHeight;
         }
     </script>
 </body>

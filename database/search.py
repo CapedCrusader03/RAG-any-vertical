@@ -53,6 +53,25 @@ def index_chunk_tantivy(chunk_id: str, content: str, roles: list[str], jurisdict
     writer.commit()
 
 
+def index_chunks_tantivy(chunks: list[dict]):
+    """Add multiple document chunks inside the Tantivy index in a single batch commit."""
+    writer = tantivy_index.writer()
+    try:
+        for chunk in chunks:
+            roles_str = " ".join(chunk["roles"])
+            jurs_str = " ".join(chunk["jurisdictions"])
+            writer.add_document(tantivy.Document(
+                chunk_id=chunk["chunk_id"],
+                content=chunk["content"],
+                allowed_roles=roles_str,
+                allowed_jurisdictions=jurs_str
+            ))
+        writer.commit()
+    except Exception as e:
+        logger.error(f"Failed to batch index chunks in Tantivy: {e}")
+        raise e
+
+
 def clear_tantivy_index():
     """Wipes the Tantivy index clean."""
     global tantivy_index

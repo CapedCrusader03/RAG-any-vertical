@@ -1,17 +1,25 @@
 import os
 # Force Docling to run layout models on CPU to preserve GPU memory for LLM inference
 os.environ["DOCLING_DEVICE"] = "cpu"
+# Limit thread counts to prevent concurrent page processing from causing OOM (std::bad_alloc)
+os.environ["OMP_NUM_THREADS"] = "2"
+os.environ["DOCLING_NUM_THREADS"] = "2"
+
 import json
 import logging
 import uuid
 from dotenv import load_dotenv
 from pypdf import PdfReader
 
-from docling.document_converter import DocumentConverter
+from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.chunking import HybridChunker
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions
+from docling.datamodel.accelerator_options import AcceleratorOptions, AcceleratorDevice
+from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 
 from database.connection import get_db_connection
-from database.search import index_chunk_tantivy, clear_tantivy_index
+from database.search import index_chunk_tantivy, index_chunks_tantivy, clear_tantivy_index
 from embeddings.local_models import get_embeddings, get_embedding
 
 load_dotenv()
@@ -119,7 +127,23 @@ def ingest_document(file_path: str, meta_path: str, task_id: str = None):
     try:
         log_msg = f"Parsing and chunking policy file with Docling layout analyzer..."
         update_progress(task_id, "processing", log_msg, 30)
-        converter = DocumentConverter()
+        # Configure pipeline options to limit CPU threads and optimize memory footprint
+        pipeline_options = PdfPipelineOptions()
+        pipeline_options.do_ocr = False  # Disable OCR to prevent memory OOM (std::bad_alloc)
+        pipeline_options.do_table_structure = True
+        pipeline_options.accelerator_options = AcceleratorOptions(
+            num_threads=2,
+            device=AcceleratorDevice.CPU
+        )
+        
+        converter = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(
+                    pipeline_options=pipeline_options,
+                    backend=PyPdfiumDocumentBackend
+                )
+            }
+        )
         result = converter.convert(file_path)
         doc = result.document
 
@@ -186,6 +210,7 @@ def ingest_document(file_path: str, meta_path: str, task_id: str = None):
                     (doc_id, title, source_url)
                 )
                 
+                tantivy_batch = []
                 # 2. Insert chunks
                 for idx, chunk in enumerate(chunks):
                     chunk_id = str(uuid.uuid4())
@@ -210,13 +235,16 @@ def ingest_document(file_path: str, meta_path: str, task_id: str = None):
                         )
                     )
                     
-                    # Write to Tantivy
-                    index_chunk_tantivy(
-                        chunk_id=chunk_id,
-                        content=chunk["content"],
-                        roles=allowed_roles,
-                        jurisdictions=allowed_jurisdictions
-                    )
+                    # Add to Tantivy batch
+                    tantivy_batch.append({
+                        "chunk_id": chunk_id,
+                        "content": chunk["content"],
+                        "roles": allowed_roles,
+                        "jurisdictions": allowed_jurisdictions
+                    })
+                
+                # Batch write to Tantivy index
+                index_chunks_tantivy(tantivy_batch)
             conn.commit()
     except Exception as e:
         err = f"Database insertion failure: {e}"

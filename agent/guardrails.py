@@ -77,8 +77,22 @@ def validate_citations(answer: str, retrieved_chunks: list[dict]) -> tuple[bool,
     clean_answer = re.sub(r'<(thought|thinking)>.*?</\1>', '', answer, flags=re.DOTALL)
     clean_answer = clean_answer.strip()
 
+    # Check if the response is a refusal statement to avoid blocking legitimate non-hallucinated refusals
+    refusal_keywords = [
+        "i am sorry", "i'm sorry", "sorry, but",
+        "does not contain the information", "does not contain any information",
+        "no information required to answer", "information is not provided",
+        "not mentioned in the provided", "not contain the information",
+        "do not have access to", "no documentation", "unverifiable",
+        "unable to answer", "cannot answer"
+    ]
+    is_refusal = any(kw in clean_answer.lower() for kw in refusal_keywords)
+
     citations = CITATION_REGEX.findall(clean_answer)
     if not citations:
+        if is_refusal:
+            logger.info("Refusal message detected. Bypassing citation validation.")
+            return True, clean_answer, []
         # Check if model attempted to answer but skipped citation
         # Answers without citation in a regulated domain is a hard reject
         return False, clean_answer, ["No citations provided in the answer."]
