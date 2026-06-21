@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Ingestion Portal</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: rgba(20, 22, 30, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary-glow: linear-gradient(135deg, #7c3aed, #3b82f6);
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --status-green: #10b981;
+            --status-red: #ef4444;
+            --status-yellow: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2.5rem 1rem;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary-glow);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--accent-purple);
+        }
+
+        .brand {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: var(--primary-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            max-width: 500px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 850px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .form-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="url"] {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        input[type="text"]:focus, input[type="url"]:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+            background: rgba(15, 15, 20, 0.8);
+        }
+
+        /* Drag and Drop Zone */
+        .dropzone {
+            width: 100%;
+            border: 2px dashed var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            background: rgba(10, 10, 15, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .dropzone.dragover {
+            border-color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.05);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+        }
+
+        .dropzone-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            transition: transform 0.2s ease;
+        }
+
+        .dropzone:hover .dropzone-icon {
+            transform: translateY(-3px);
+        }
+
+        .dropzone-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .dropzone-text span {
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+
+        .file-info {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-blue);
+        }
+
+        /* Permission Pills selection */
+        .tag-select-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            background: rgba(10, 10, 15, 0.4);
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .tag-pill {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .tag-pill:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-main);
+        }
+
+        .tag-pill.active {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: var(--accent-purple);
+            color: var(--text-main);
+            box-shadow: 0 0 8px rgba(139, 92, 246, 0.2);
+        }
+
+        .tag-pill input {
+            display: none;
+        }
+
+        /* Ingestion Button */
+        button.submit-btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: var(--primary-glow);
+            border: none;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        button.submit-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        button.submit-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Column 2: Ingestion progress */
+        .progress-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .progress-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .status-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .status-badge.pending {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--status-yellow);
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+
+        .status-badge.processing {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--status-blue);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .status-badge.completed {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--status-green);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .status-badge.failed {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--status-red);
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        /* Progress Bar */
+        .bar-outer {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .bar-inner {
+            height: 100%;
+            width: 0%;
+            background: var(--primary-glow);
+            border-radius: 5px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+        }
+
+        /* Logs Console */
+        .logs-panel {
+            background: rgba(10, 10, 12, 0.85);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            height: 250px;
+            overflow-y: auto;
+            color: #d1d5db;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .log-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .log-timestamp {
+            color: var(--accent-purple);
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        .log-text {
+            word-break: break-all;
+        }
+
+        .log-text.error {
+            color: var(--status-red);
+        }
+        
+        .log-text.success {
+            color: var(--status-green);
+        }
+
+        /* Empty state */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .empty-state-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-container">
+            <div class="logo-dot"></div>
+            <div class="brand">DocuGate Ingest</div>
+        </div>
+        <div class="subtitle">Compliance-Aware Document Ingestion & Vector Indexing Engine</div>
+    </header>
+
+    <div class="main-container">
+        <!-- Ingestion Form -->
+        <div class="glass-card">
+            <h2 class="form-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Upload Document
+            </h2>
+
+            <form id="uploadForm">
+                <!-- Dropzone -->
+                <div class="dropzone" id="dropzone">
+                    <input type="file" id="fileInput" name="file" accept=".pdf,.txt,.md" style="display: none;">
+                    <div class="dropzone-icon">📥</div>
+                    <div class="dropzone-text">Drag and drop file here, or <span>browse</span></div>
+                    <div class="dropzone-text" style="font-size: 0.75rem; margin-top: 0.25rem;">Supports PDF, TXT, MD</div>
+                    <div class="file-info" id="fileInfo">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span id="fileName">policy.pdf</span>
+                    </div>
+                </div>
+
+                <!-- Document Title -->
+                <div class="form-group">
+                    <label for="title">Document Title</label>
+                    <input type="text" id="title" name="title" placeholder="e.g. California Wildfire Policy" required>
+                </div>
+
+                <!-- Source URL -->
+                <div class="form-group">
+                    <label for="source_url">Source URL (Optional)</label>
+                    <input type="url" id="source_url" name="source_url" placeholder="e.g. s3://bucket/ca_wildfire.pdf">
+                </div>
+
+                <!-- Allowed Roles -->
+                <div class="form-group">
+                    <label>Allowed Roles (Compliance Filter)</label>
+                    <div class="tag-select-container" id="rolesContainer">
+                        <label class="tag-pill active">
+                            <input type="checkbox" name="role" value="underwriter" checked> underwriter
+                        </label>
+                        <label class="tag-pill">
+                            <input type="checkbox" name="role" value="agent"> agent
+                        </label>
+                        <label class="tag-pill">
+                            <input type="checkbox" name="role" value="guest"> guest
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Allowed Jurisdictions -->
+                <div class="form-group">
+                    <label>Allowed Jurisdictions (Compliance Filter)</label>
+                    <div class="tag-select-container" id="jursContainer">
+                        <label class="tag-pill active">
+                            <input type="checkbox" name="jur" value="US-TX" checked> US-TX
+                        </label>
+                        <label class="tag-pill active">
+                            <input type="checkbox" name="jur" value="US-CA" checked> US-CA
+                        </label>
+                        <label class="tag-pill">
+                            <input type="checkbox" name="jur" value="US-FL"> US-FL
+                        </label>
+                        <label class="tag-pill">
+                            <input type="checkbox" name="jur" value="US-NY"> US-NY
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Begin Layout-Aware Ingestion</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Progress Panel -->
+        <div class="glass-card progress-container">
+            <div class="progress-header">
+                <h2 class="form-title" style="margin-bottom: 0;">Ingestion Progress</h2>
+                <span class="status-badge" id="statusBadge">IDLE</span>
+            </div>
+
+            <!-- Progress Bar -->
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                    <span>Indexing Phase</span>
+                    <span id="percentText">0%</span>
+                </div>
+                <div class="bar-outer">
+                    <div class="bar-inner" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- Terminal Logs -->
+            <div>
+                <label style="margin-bottom: 0.5rem;">Pipeline Trace Logs</label>
+                <div class="logs-panel" id="logsPanel">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📡</div>
+                        <div>Start an ingestion task to monitor parsing, embedding, and indexing outputs in real time.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Core Dropzone logic
+        const dropzone = document.getElementById('dropzone');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+
+        dropzone.addEventListener('click', () => fileInput.click());
+
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.classList.add('dragover');
+        });
+
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('dragover');
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                updateFileDisplay();
+            }
+        });
+
+        fileInput.addEventListener('change', updateFileDisplay);
+
+        function updateFileDisplay() {
+            if (fileInput.files.length) {
+                fileName.textContent = fileInput.files[0].name;
+                fileInfo.style.display = 'flex';
+                
+                // Auto-fill Document Title if empty
+                const titleInput = document.getElementById('title');
+                if (!titleInput.value) {
+                    const baseName = fileInput.files[0].name.replace(/\.[^/.]+$/, "");
+                    titleInput.value = baseName.replace(/[-_]/g, ' ');
+                }
+            } else {
+                fileInfo.style.display = 'none';
+            }
+        }
+
+        // Pill Selection states
+        document.querySelectorAll('.tag-pill').forEach(pill => {
+            const checkbox = pill.querySelector('input');
+            pill.addEventListener('click', (e) => {
+                // Let the browser handle standard input checkbox toggle, just capture UI update
+                setTimeout(() => {
+                    if (checkbox.checked) {
+                        pill.classList.add('active');
+                    } else {
+                        pill.classList.remove('active');
+                    }
+                }, 10);
+            });
+        });
+
+        // Submit form and poll progress API
+        const form = document.getElementById('uploadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusBadge = document.getElementById('statusBadge');
+        const progressBar = document.getElementById('progressBar');
+        const percentText = document.getElementById('percentText');
+        const logsPanel = document.getElementById('logsPanel');
+
+        let activeTaskId = null;
+        let pollInterval = null;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (!fileInput.files.length) {
+                alert("Please select or drop a file first.");
+                return;
+            }
+
+            // Gather roles
+            const checkedRoles = Array.from(document.querySelectorAll('input[name="role"]:checked')).map(el => el.value);
+            const checkedJurs = Array.from(document.querySelectorAll('input[name="jur"]:checked')).map(el => el.value);
+
+            if (checkedRoles.length === 0 || checkedJurs.length === 0) {
+                alert("Please select at least one role and one jurisdiction for access control.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+            formData.append("title", document.getElementById('title').value);
+            formData.append("source_url", document.getElementById('source_url').value);
+            formData.append("roles", checkedRoles.join(","));
+            formData.append("jurisdictions", checkedJurs.join(","));
+
+            // Initialize Progress UI
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            submitBtn.querySelector('span').textContent = 'Uploading...';
+            
+            statusBadge.className = 'status-badge pending';
+            statusBadge.textContent = 'PENDING';
+            progressBar.style.width = '5%';
+            percentText.textContent = '5%';
+            
+            logsPanel.innerHTML = '';
+            addLogLine("Local Server", "Uploading document and metadata to corpus directory...");
+
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errDetail = await response.json();
+                    throw new Error(errDetail.detail || "Server error occurred");
+                }
+
+                const result = await response.json();
+                activeTaskId = result.task_id;
+                addLogLine("Local Server", `Upload complete. Scheduled background task: ${activeTaskId}`);
+                
+                // Start Polling progress
+                if (pollInterval) clearInterval(pollInterval);
+                pollInterval = setInterval(pollProgress, 1000);
+            } catch (err) {
+                addLogLine("Error", err.message, true);
+                statusBadge.className = 'status-badge failed';
+                statusBadge.textContent = 'FAILED';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.querySelector('span').textContent = 'Begin Layout-Aware Ingestion';
+            }
+        });
+
+        async function pollProgress() {
+            if (!activeTaskId) return;
+
+            try {
+                const response = await fetch(`/api/progress/${activeTaskId}`);
+                if (!response.ok) return;
+
+                const data = await response.json();
+                
+                // Update UI state
+                statusBadge.className = `status-badge ${data.state}`;
+                statusBadge.textContent = data.state.toUpperCase();
+                
+                progressBar.style.width = `${data.percentage}%`;
+                percentText.textContent = `${data.percentage}%`;
+                
+                // Append log lines if not redundant
+                addLogLine("Ingestion Pipeline", data.log, data.state === 'failed', data.state === 'completed');
+
+                if (data.state === 'completed' || data.state === 'failed') {
+                    clearInterval(pollInterval);
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.querySelector('span').textContent = 'Begin Layout-Aware Ingestion';
+                }
+            } catch (e) {
+                console.error("Failed to poll progress", e);
+            }
+        }
+
+        let lastLog = "";
+        function addLogLine(sender, message, isError = false, isSuccess = false) {
+            if (message === lastLog) return;
+            lastLog = message;
+
+            const timeStr = new Date().toLocaleTimeString();
+            const line = document.createElement('div');
+            line.className = 'log-line';
+            
+            let colorClass = "";
+            if (isError) colorClass = "error";
+            if (isSuccess) colorClass = "success";
+
+            line.innerHTML = `
+                <span class="log-timestamp">[${timeStr}]</span>
+                <span class="log-timestamp" style="color: var(--accent-blue);">${sender}:</span>
+                <span class="log-text ${colorClass}">${message}</span>
+            `;
+            
+            logsPanel.appendChild(line);
+            logsPanel.scrollTop = logsPanel.scrollHeight;
+        }
+    </script>
+</body>
+</html>

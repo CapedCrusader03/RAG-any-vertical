@@ -19,6 +19,18 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Global progress tracker dictionary mapping task_id to progress state
+ingestion_tasks = {}
+
+def update_progress(task_id: str, state: str, log: str, percentage: int):
+    if task_id:
+        ingestion_tasks[task_id] = {
+            "state": state,
+            "log": log,
+            "percentage": percentage
+        }
+        logger.info(f"[Task {task_id} - {percentage}%] State: {state} | Log: {log}")
+
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
 
@@ -62,21 +74,32 @@ def chunk_text(pages_data: list[dict]) -> list[dict]:
             
     return chunks
 
-def ingest_document(file_path: str, meta_path: str):
+def ingest_document(file_path: str, meta_path: str, task_id: str = None):
     """
     Ingests a single document. Reads text, chunks it, retrieves metadata,
-    writes to PostgreSQL and Tantivy.
+    writes to PostgreSQL and Tantivy, reporting progress if task_id is given.
     """
     if not os.path.exists(file_path):
-        logger.error(f"Document file not found: {file_path}")
+        err = f"Document file not found: {file_path}"
+        logger.error(err)
+        update_progress(task_id, "failed", err, 100)
         return
         
     if not os.path.exists(meta_path):
-        raise ValueError(f"[Refusal] Access control metadata missing for: {file_path}. Regulated deployments must have role & jurisdiction tags.")
+        err = f"[Refusal] Access control metadata missing for: {file_path}."
+        logger.error(err)
+        update_progress(task_id, "failed", err, 100)
+        raise ValueError(err)
 
     # Load metadata
-    with open(meta_path, "r") as f:
-        meta = json.load(f)
+    try:
+        with open(meta_path, "r") as f:
+            meta = json.load(f)
+    except Exception as e:
+        err = f"Failed to parse metadata JSON: {e}"
+        logger.error(err)
+        update_progress(task_id, "failed", err, 100)
+        raise e
         
     allowed_roles = meta.get("allowed_roles")
     allowed_jurisdictions = meta.get("allowed_jurisdictions")
@@ -84,13 +107,18 @@ def ingest_document(file_path: str, meta_path: str):
     source_url = meta.get("source_url", "")
     
     if not allowed_roles or not allowed_jurisdictions:
-        raise ValueError(f"[Refusal] allowed_roles and allowed_jurisdictions cannot be empty in {meta_path}")
+        err = f"[Refusal] allowed_roles and allowed_jurisdictions cannot be empty in {meta_path}"
+        logger.error(err)
+        update_progress(task_id, "failed", err, 100)
+        raise ValueError(err)
 
-    logger.info(f"Ingesting: {title} | Roles: {allowed_roles} | Jurisdictions: {allowed_jurisdictions}")
+    log_msg = f"Ingesting: {title} | Roles: {allowed_roles} | Jurisdictions: {allowed_jurisdictions}"
+    update_progress(task_id, "processing", log_msg, 10)
 
     # Parse and chunk using Docling layout-aware parsing
     try:
-        logger.info(f"Parsing and chunking {file_path} with Docling...")
+        log_msg = f"Parsing and chunking policy file with Docling layout analyzer..."
+        update_progress(task_id, "processing", log_msg, 30)
         converter = DocumentConverter()
         result = converter.convert(file_path)
         doc = result.document
@@ -119,6 +147,8 @@ def ingest_document(file_path: str, meta_path: str):
             })
     except Exception as e:
         logger.error(f"Docling conversion failed for {file_path}: {e}. Falling back to naive parsing.")
+        log_msg = f"Docling failed, falling back to naive text extraction..."
+        update_progress(task_id, "processing", log_msg, 40)
         # Parse file (Fallback)
         if file_path.lower().endswith(".pdf"):
             pages = parse_pdf(file_path)
@@ -131,57 +161,71 @@ def ingest_document(file_path: str, meta_path: str):
         chunks = chunk_text(pages)
 
     if not chunks:
-        logger.warning(f"No text extracted from: {file_path}")
+        err = f"No text extracted from: {file_path}"
+        logger.warning(err)
+        update_progress(task_id, "failed", err, 100)
         return
 
     # Extract contents for batch embeddings
+    log_msg = f"Generating vector embeddings for {len(chunks)} chunks..."
+    update_progress(task_id, "processing", log_msg, 60)
     contents = [c["content"] for c in chunks]
     embeddings = get_embeddings(contents)
 
     # Insert into Database and Tantivy
-    with get_db_connection() as conn:
-        with conn.cursor() as cursor:
-            # 1. Create document record
-            doc_id = str(uuid.uuid4())
-            cursor.execute(
-                "INSERT INTO documents (id, title, source_url) VALUES (%s, %s, %s);",
-                (doc_id, title, source_url)
-            )
-            
-            # 2. Insert chunks
-            for idx, chunk in enumerate(chunks):
-                chunk_id = str(uuid.uuid4())
-                embedding = embeddings[idx]
-                
-                # Write to PG
+    log_msg = f"Indexing document inside PostgreSQL and Tantivy search engines..."
+    update_progress(task_id, "processing", log_msg, 80)
+    
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cursor:
+                # 1. Create document record
+                doc_id = str(uuid.uuid4())
                 cursor.execute(
-                    """
-                    INSERT INTO document_chunks 
-                    (id, document_id, content, embedding, allowed_roles, allowed_jurisdictions, chunk_index, page_number)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
-                    """,
-                    (
-                        chunk_id, 
-                        doc_id, 
-                        chunk["content"], 
-                        embedding, 
-                        allowed_roles, 
-                        allowed_jurisdictions, 
-                        chunk["chunk_index"], 
-                        chunk["page_number"]
-                    )
+                    "INSERT INTO documents (id, title, source_url) VALUES (%s, %s, %s);",
+                    (doc_id, title, source_url)
                 )
                 
-                # Write to Tantivy
-                index_chunk_tantivy(
-                    chunk_id=chunk_id,
-                    content=chunk["content"],
-                    roles=allowed_roles,
-                    jurisdictions=allowed_jurisdictions
-                )
-        conn.commit()
+                # 2. Insert chunks
+                for idx, chunk in enumerate(chunks):
+                    chunk_id = str(uuid.uuid4())
+                    embedding = embeddings[idx]
+                    
+                    # Write to PG
+                    cursor.execute(
+                        """
+                        INSERT INTO document_chunks 
+                        (id, document_id, content, embedding, allowed_roles, allowed_jurisdictions, chunk_index, page_number)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
+                        """,
+                        (
+                            chunk_id, 
+                            doc_id, 
+                            chunk["content"], 
+                            embedding, 
+                            allowed_roles, 
+                            allowed_jurisdictions, 
+                            chunk["chunk_index"], 
+                            chunk["page_number"]
+                        )
+                    )
+                    
+                    # Write to Tantivy
+                    index_chunk_tantivy(
+                        chunk_id=chunk_id,
+                        content=chunk["content"],
+                        roles=allowed_roles,
+                        jurisdictions=allowed_jurisdictions
+                    )
+            conn.commit()
+    except Exception as e:
+        err = f"Database insertion failure: {e}"
+        logger.error(err)
+        update_progress(task_id, "failed", err, 100)
+        raise e
 
-    logger.info(f"Successfully indexed document '{title}' with {len(chunks)} chunks.")
+    success_msg = f"Successfully indexed document '{title}' with {len(chunks)} chunks."
+    update_progress(task_id, "completed", success_msg, 100)
 
 def ingest_directory(directory_path: str):
     """Scan directory for document files and ingest them alongside metadata."""
