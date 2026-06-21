@@ -1,9 +1,14 @@
 import os
+# Force Docling to run layout models on CPU to preserve GPU memory for LLM inference
+os.environ["DOCLING_DEVICE"] = "cpu"
 import json
 import logging
 import uuid
 from dotenv import load_dotenv
 from pypdf import PdfReader
+
+from docling.document_converter import DocumentConverter
+from docling.chunking import HybridChunker
 
 from database.connection import get_db_connection
 from database.search import index_chunk_tantivy, clear_tantivy_index
@@ -83,17 +88,48 @@ def ingest_document(file_path: str, meta_path: str):
 
     logger.info(f"Ingesting: {title} | Roles: {allowed_roles} | Jurisdictions: {allowed_jurisdictions}")
 
-    # Parse file
-    if file_path.lower().endswith(".pdf"):
-        pages = parse_pdf(file_path)
-    else:
-        # Default to raw text reading for txt/md
-        with open(file_path, "r", encoding="utf-8") as f:
-            raw_text = f.read()
-        pages = [{"page_number": 1, "text": raw_text}]
+    # Parse and chunk using Docling layout-aware parsing
+    try:
+        logger.info(f"Parsing and chunking {file_path} with Docling...")
+        converter = DocumentConverter()
+        result = converter.convert(file_path)
+        doc = result.document
 
-    # Chunk content
-    chunks = chunk_text(pages)
+        chunker = HybridChunker()
+        doc_chunks = list(chunker.chunk(doc))
+
+        chunks = []
+        for idx, chunk in enumerate(doc_chunks):
+            # Extract page numbers safely from provenance list
+            pages = set()
+            if hasattr(chunk, 'meta') and hasattr(chunk.meta, 'doc_items'):
+                for item in chunk.meta.doc_items:
+                    if hasattr(item, 'prov') and item.prov:
+                        for prov in item.prov:
+                            if hasattr(prov, 'page_no'):
+                                pages.add(prov.page_no)
+                            elif isinstance(prov, dict) and 'page_no' in prov:
+                                pages.add(prov['page_no'])
+            
+            page_number = min(pages) if pages else 1
+            chunks.append({
+                "content": chunk.text,
+                "page_number": page_number,
+                "chunk_index": idx
+            })
+    except Exception as e:
+        logger.error(f"Docling conversion failed for {file_path}: {e}. Falling back to naive parsing.")
+        # Parse file (Fallback)
+        if file_path.lower().endswith(".pdf"):
+            pages = parse_pdf(file_path)
+        else:
+            # Default to raw text reading for txt/md
+            with open(file_path, "r", encoding="utf-8") as f:
+                raw_text = f.read()
+            pages = [{"page_number": 1, "text": raw_text}]
+        # Chunk content (Fallback)
+        chunks = chunk_text(pages)
+
     if not chunks:
         logger.warning(f"No text extracted from: {file_path}")
         return
